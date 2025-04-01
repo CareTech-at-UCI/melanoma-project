@@ -1,7 +1,7 @@
-#⚒️Work in Progress!!
-🟡 The Tech Committee is currently finalizing the preprocessing data phase and starting the model building phase 
+# ⚒️Work in Progress!!
+🟡 The Tech Committee is currently finalizing the data preprocessing phase and starting the model building phase 
 
-#Melanoma Detection Project
+# Melanoma Detection Project
 **A clear disclaimer:** this tool is not a replacement for professional medical diagnosis, but a first step in awareness.
 The purpose of this tool is to encourage users to take charge of their own health by checking potential signs of melanoma early.
 In relation to diseases like cancer, the importance of early detection is crucial and often becomes noticed too late.
