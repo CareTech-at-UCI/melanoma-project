@@ -1,0 +1,15 @@
+[project]
+name = "kaggle"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "matplotlib>=3.10.1",
+    "opencv-python>=4.11.0.86",
+    "pandas>=2.2.3",
+]
