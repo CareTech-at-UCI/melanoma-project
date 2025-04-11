@@ -1,0 +1,14 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+ISIC_2019_Training_Input/*
+working/
+ISIC_2019_Training_GroundTruth.csv
