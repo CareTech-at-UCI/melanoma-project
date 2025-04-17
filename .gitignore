@@ -1,5 +1,6 @@
-/isic_2019
+preprocessed_dataset//isic_2019
 /preprocessed_images
+preprocessed_dataset/
 /testing_preprocessed_images
 /old_preprocessed_images
 /augmented_images
