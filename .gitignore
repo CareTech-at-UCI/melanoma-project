@@ -1,2 +1,3 @@
 .DS_Store
 preprocessed_dataset/
+model_training/best_model.h5
