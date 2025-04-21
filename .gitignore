@@ -10,5 +10,7 @@ wheels/
 .venv
 
 ISIC_2019_Training_Input/*
+ISIC_2019_Test_Input/*
 working/
 ISIC_2019_Training_GroundTruth.csv
+ISIC_2019_Test_GroundTruth.csv
