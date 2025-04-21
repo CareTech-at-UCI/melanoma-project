@@ -23,6 +23,7 @@ wheels/
 .venv
 
 ISIC_2019_Training_Input/*
+ISIC_2019_Test_Input/*
 working/
 ISIC_2019_Training_GroundTruth.csv
->>>>>>> fd9ea57 (feat: processed-non-augmented code)
+ISIC_2019_Test_GroundTruth.csv
