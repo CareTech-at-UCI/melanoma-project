@@ -1,2 +1,6 @@
 # For git lfs on the keras models: https://git-lfs.com
+# steps to see if .keras is tracked by git lfs:
+# git lfs track "*.keras" -if its already been done then yay
+# stage .keras model
+# git lfs ls-files if it shows up then we good
 *.keras filter=lfs diff=lfs merge=lfs -text
