@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 preprocessed_dataset//isic_2019
 /preprocessed_images
@@ -9,3 +10,21 @@ model_training/best_model.h5
 *.csv.DS_Store
 preprocessed_dataset/
 model_training/best_model.h5
+=======
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+ISIC_2019_Training_Input/*
+ISIC_2019_Test_Input/*
+working/
+ISIC_2019_Training_GroundTruth.csv
+ISIC_2019_Test_GroundTruth.csv
+ISIC_2019_Training_Metadata.csv
