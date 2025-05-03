@@ -6,4 +6,6 @@ model_training/best_model.h5
 /testing_preprocessed_images
 /old_preprocessed_images
 /augmented_images
-*.csv
+*.csv.DS_Store
+preprocessed_dataset/
+model_training/best_model.h5
