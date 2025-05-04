@@ -14,10 +14,7 @@ export const Navbar = () => {
           <a href="/" className="text-[16px] text-main-brown font-gantari font-bold">
             Melanoma Detector
           </a>
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-main-brown focus:outline-none"
-          >
+          <button onClick={toggleMenu} className="lg:hidden text-main-brown focus:outline-none">
             {/* Hamburger */}
             <svg
               className="w-6 h-6"
@@ -26,8 +23,7 @@ export const Navbar = () => {
               strokeLinejoin="round"
               strokeWidth="2"
               viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
+              stroke="currentColor">
               {isOpen ? (
                 <path d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -44,30 +40,22 @@ export const Navbar = () => {
             <a href="/" className="text-main-brown">Education</a>
           </div>
           <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="/"
-              className="bg-[#D35400] text-white px-3.5 py-1.5 rounded-full transition duration-300"
-            >
+            <a href="/" className="bg-[#D35400] text-white px-3.5 py-1.5 rounded-full transition duration-300">
               Scan
             </a>
           </div>
         </div>
 
         {/* Mobile */}
-        <div
-          className={`lg:hidden ${
+        <div className={`lg:hidden ${
             isOpen ? 'block' : 'hidden'
-          } pt-4`}
-        >
+          } pt-4`}>
           <div className="flex flex-col space-y-4">
             <a href="/" className="text-main-brown">Home</a>
             <a href="/" className="text-main-brown">Doctors & Clinics</a>
             <a href="/" className="text-main-brown">Credits</a>
             <a href="/" className="text-main-brown">Education</a>
-            <a
-              href="/"
-              className="bg-[#D35400] text-white px-6 py-2 rounded-full transition duration-300 inline-block w-fit"
-            >
+            <a href="/" className="bg-[#D35400] text-white px-6 py-2 rounded-full transition duration-300 inline-block w-fit">
               Scan
             </a>
           </div>
@@ -89,11 +77,5 @@ export const Footer = () => {
       </footer>
   );
 }
-
-// export const navbar = () => {
-//   return (
-//     <div>navbar</div>
-//   )
-// }
 
 
