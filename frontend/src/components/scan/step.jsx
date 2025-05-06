@@ -5,7 +5,8 @@ const StepCard = ({title, description, icon: Icon }) => {
         <div className="
             bg-cream
             w-[326px] 
-            h-[200px] 
+            h-[124px]
+            md:h-[200px] 
             rounded-[8px] 
             p-[16px] 
             shadow-[0px_8px_8px_0px_rgba(0,0,0,0.15)]
@@ -21,11 +22,11 @@ const StepCard = ({title, description, icon: Icon }) => {
                     <Icon/>
                 </div>
                 {/*step-text*/}
-                <div className="w-[294px] h-[102px] flex flex-col gap-[16px]">
-                    <h1 className="font-gantari text-main-brown text-header-5">
+                <div className="w-[294px] h-[55px] md:h-[102px] flex flex-col gap-[8px] md:gap-[16px]">
+                    <h1 className="font-gantari text-main-brown text-header-7 md:text-header-5">
                         {title}
                     </h1>
-                    <h1 className="font-gantari text-main-brown text-header-6">
+                    <h1 className="font-gantari text-main-brown text-header-8 md:text-header-6">
                         {description}
                     </h1>
                 </div>

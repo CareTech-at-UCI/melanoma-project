@@ -24,6 +24,10 @@ module.exports = {
         'header-4': ['22px', { fontWeight: '700' }],
         'header-5': ['24px', { letterSpacing: '-0.03em', fontWeight: '500' }],
         'header-6': ['16px', { letterSpacing: '-0.03em', fontWeight: '400' }],
+        'header-7': ['16px', { letterSpacing: '-0.03em', fontWeight: '500' }],
+        'header-8': ['12px', { letterSpacing: '-0.03em', fontWeight: '400' }],
+        'header-9': ['32px', { letterSpacing: '-0.03em', fontWeight: '400' }],
+
         'body': ['24px', { fontWeight: '300' }],
       },
     },
