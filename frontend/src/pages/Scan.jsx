@@ -1,14 +1,14 @@
 import React from 'react'
 import { CameraIcon, UploadIcon, CheckIcon} from '../components/scan/icons'
 import StepCard from '../components/scan/step'
-// import gradient from "../images/scan_gradient.png"
-// Insert gradient image using <div className="bg-cover bg-center" style= {{backgroundImage: `url(${gradient})`}}>
+import gradient from "../images/scan_gradient.png"
 
 export const Scan = () => {
-
   return (
-    
-    <div className="bg-off-white min-h-screen w-full flex flex-col items-center justify-center">
+    <div className="bg-off-white min-h-screen w-full flex flex-col items-center">
+        {/*Background gradient*/}
+        <div className="absolute inset-0 bg-cover bg-center opacity-50" style={{backgroundImage: `url(${gradient})`}}>
+        </div>
         {/*Frame 44*/}
         <div className="absolute top-[175px] w-[1271px] h-[747px] flex flex-col items-center">
             {/*Frame 135*/}
@@ -35,6 +35,6 @@ export const Scan = () => {
             </div>
         </div>
     </div> 
+    
   )
 };
-
