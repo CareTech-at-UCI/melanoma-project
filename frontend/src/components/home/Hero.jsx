@@ -50,12 +50,13 @@ export const Hero = () => {
             </button>
           </div>
           {/* Image */}
-          <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
+          <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0 relative">
             <img
-              src="/assets/images/hero-image.png"
+              src="/assets/creative-young-adult-cropped.png"
               alt="Melanoma detection concept"
-              className="max-w-full h-auto md:max-w-md lg:max-w-lg rounded-3xl border-2"
+              className="max-w-full h-auto md:max-w-md lg:max-w-lg rounded-3xl"
             />
+            <img src="assets/brown-circle.svg" alt="Brown Circle" className="absolute w-full h-full -rotate-6" />
           </div>
         </div>
       </div>
