@@ -2,6 +2,7 @@ import React from 'react'
 import { CameraIcon, UploadIcon, CheckIcon} from '../components/scan/icons'
 import StepCard from '../components/scan/step'
 import gradient from "../images/scan_gradient.png"
+import Upload from '../components/scan/upload'
 
 export const Scan = () => {
   return (
@@ -30,8 +31,9 @@ export const Scan = () => {
                 </div>
 
                 {/*upload-image-component*/}
-                <div className="bg-light-brown w-[289px] h-[222px] md:w-[994px] md:h-[417px]">
-
+                <div className="bg-[#F5F5F5] w-[289px] h-[222px] md:w-[994px] md:h-[417px]">
+                    <p className='font-gantari text-main-brown pl-[5%] pt-[5%]'>Upload Image</p>
+                    <Upload/>
                 </div>
             </div>
         </div>
