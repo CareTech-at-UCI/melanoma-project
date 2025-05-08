@@ -10,19 +10,19 @@ export default function Upload() {
   };
   const MAX_FILE_SIZE_MB = 15;
   const { getRootProps, getInputProps, isDragActive, open: openFileDialog } = useDropzone({
-    onDrop: (files) => {
-      const file = files[0];
-      if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
-        setUploadedFile(null);
-        setFileError(`File is too large. Max size is ${MAX_FILE_SIZE_MB}MB.`);
-      } else {
-        setUploadedFile(file);
-        setFileError(null);
-      }
+    onDrop: (acceptedFiles) => {
+      const file = acceptedFiles[0];
+      setUploadedFile(file);
+      setFileError(null);
+    },
+    onDropRejected: (rejectedFiles) => {
+      setUploadedFile(null);
+      setFileError('Upload Failed: Maximum file size of 1 MB reached');
     },
     accept: { 'image/*': [] },
+    maxSize: MAX_FILE_SIZE_MB * 1024 * 1024,
     multiple: false,
-    noClick: true
+    noClick: true,
   });
 
   return (
@@ -55,13 +55,13 @@ export default function Upload() {
           </div>
         </div>
       </div>
-      {fileError && (
-        <div className='text-center'>
-          {fileError}
-        </div>
+      {!uploadedFile && fileError && (
+        <p className='w-fit text-left ml-[5%] mt-1 px-2 py-1 bg-[#FFC8C0] text-[#FF0F0F] rounded max-w-[90%]'>
+          Upload Failed: Maximum file size of 1 MB reached
+        </p>
       )}
-      {uploadedFile && (
-        <div className='text-center'>
+      {!fileError && uploadedFile && (
+        <div className='text-left pl-[5%] pt-1'>
           <button
             onClick={removeFile}
             className=''
