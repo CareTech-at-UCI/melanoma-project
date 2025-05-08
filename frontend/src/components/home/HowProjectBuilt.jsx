@@ -44,14 +44,14 @@ export const HowProjectBuilt = () => {
           {/* ! LINK TO RIGHT THING */}
           <Link
             to="/team"
-            className="text-main-orange text-xl font-medium hover:underline"
+            className="text-main-orange text-2xl font-medium hover:underline"
           >
             View Team &gt;
           </Link>
           {/* ! LINK TO RIGHT THING */}
           <Link
             to="/credits"
-            className="text-main-orange text-xl font-medium hover:underline"
+            className="text-main-orange text-2xl font-medium hover:underline"
           >
             Project Credits &gt;
           </Link>
