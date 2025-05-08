@@ -3,11 +3,23 @@ import { useDropzone } from 'react-dropzone';
 import fileSvg from '../../images/file.svg';
 export default function Upload() {
   const [uploadedFile, setUploadedFile] = useState(null);
+  const [fileError, setFileError] = useState(null);
   const removeFile = () => {
     setUploadedFile(null);
+    setFileError(null);
   };
+  const MAX_FILE_SIZE_MB = 15;
   const { getRootProps, getInputProps, isDragActive, open: openFileDialog } = useDropzone({
-    onDrop: (files) => setUploadedFile(files[0]),
+    onDrop: (files) => {
+      const file = files[0];
+      if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
+        setUploadedFile(null);
+        setFileError(`File is too large. Max size is ${MAX_FILE_SIZE_MB}MB.`);
+      } else {
+        setUploadedFile(file);
+        setFileError(null);
+      }
+    },
     accept: { 'image/*': [] },
     multiple: false,
     noClick: true
@@ -43,6 +55,11 @@ export default function Upload() {
           </div>
         </div>
       </div>
+      {fileError && (
+        <div className='text-center'>
+          {fileError}
+        </div>
+      )}
       {uploadedFile && (
         <div className='text-center'>
           <button
