@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import { Hero } from "../components/home/Hero";
+import { WhyWeMatter } from "../components/home/WhyWeMatter";
+import { HowProjectBuilt } from "../components/home/HowProjectBuilt";
 
 export const Home = () => {
   return (
-    <h1 className="font-gantari text-body text-main-brown text-3xl font-bold underline">
-      Home
-    </h1>
-  )
-}
+    // Base styling for the page container
+    <main className="font-gantari bg-background-beige">
+      <Hero />
+      <WhyWeMatter />
+      <HowProjectBuilt />
+    </main>
+  );
+};
