@@ -14,7 +14,7 @@ export const HowProjectBuilt = () => {
   return (
     <section className="h-[90vh] md:h-[70vh] text-main-brown py-16 md:py-24 p-8 md:p-16">
       <div className="container mx-auto text-center">
-        <h2 className="text-header-2 mb-4">How the Project was Built</h2>
+        <h2 className="text-header-2 md:text-header-1 mb-4">How the Project was Built</h2>
         <p className="text-body text-base md:text-2xl text-secondary-brown mb-6 max-w-7xl mx-auto">
           An explanation of how the project was built for its purposes but also
           for the purpose of teaching students. Include all information about
