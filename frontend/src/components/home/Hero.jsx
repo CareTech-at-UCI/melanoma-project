@@ -56,7 +56,7 @@ export const Hero = () => {
             <img
               src="/assets/creative-young-adult-cropped.png"
               alt="Melanoma detection concept"
-              className="w-60 md:w-auto max-w-full h-auto md:max-w-md lg:max-w-lg rounded-3xl"
+              className="w-60 md:w-full h-auto rounded-3xl"
             />
             <img src="assets/brown-circle.svg" alt="Brown Circle" className="absolute w-full h-full -rotate-6" />
           </div>
