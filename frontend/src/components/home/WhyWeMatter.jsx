@@ -4,7 +4,7 @@ export const WhyWeMatter = () => {
   return (
     <section
       id="why-we-matter"
-      className="h-screen md:h-[70vh] flex flex-col md:flex-row text-main-brown bg-[#B59988]"
+      className="h-[90vh] md:h-[70vh] flex flex-col md:flex-row text-main-brown bg-[#B59988]"
     >
       <div className="h-full mx-auto container flex flex-col md:flex-row items-center py-16 md:py-0 p-8 md:p-0">
         {/* Text Content */}
