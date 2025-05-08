@@ -15,13 +15,13 @@ export const HowProjectBuilt = () => {
     <section className="text-main-brown py-16 md:py-24 p-8 md:p-16">
       <div className="container mx-auto text-center">
         <h2 className="text-header-2 mb-4">How the Project was Built</h2>
-        <p className="text-body text-secondary-brown mb-12 max-w-7xl mx-auto">
+        <p className="text-body text-base md:text-2xl text-secondary-brown mb-6 max-w-7xl mx-auto">
           An explanation of how the project was built for its purposes but also
-          for the purpose of teaching stwudents. Include all information about
+          for the purpose of teaching students. Include all information about
           how the project was built.
         </p>
 
-        <div className="flex justify-center items-center flex-wrap mb-12 gap-4 md:gap-8">
+        <div className="flex justify-center items-center flex-wrap mb-6 gap-4 md:gap-8">
           {technologies.map((tech) => (
             <div
               key={tech.alt}
@@ -40,18 +40,18 @@ export const HowProjectBuilt = () => {
           ))}
         </div>
 
-        <div className="flex justify-center items-center gap-8">
+        <div className="flex flex-col justify-center items-center gap-8 text-[#C24A00]">
           {/* ! LINK TO RIGHT THING */}
           <Link
             to="/team"
-            className="text-main-orange text-xl font-bold hover:underline"
+            className="text-main-orange text-xl font-medium hover:underline"
           >
             View Team &gt;
           </Link>
           {/* ! LINK TO RIGHT THING */}
           <Link
             to="/credits"
-            className="text-main-orange text-xl font-bold hover:underline"
+            className="text-main-orange text-xl font-medium hover:underline"
           >
             Project Credits &gt;
           </Link>
