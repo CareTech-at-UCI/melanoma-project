@@ -27,34 +27,36 @@ export const Hero = () => {
   };
 
   return (
-    <section className="text-main-brown h-screen flex flex-col">
+    <section className="text-main-brown min-h-screen flex flex-col">
       {/* Main Content Area - centered */}
       <div className="flex-grow flex items-center justify-center p-8 md:p-16">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-5 md:gap-12">
           {/* Text Content */}
-          <div className="w-full md:w-1/2 text-center md:text-left">
-            <h1 className="text-header-1 mb-4">
+          <div className="w-full md:w-1/2 text-left space-y-6 md:space-y-8">
+            <h1 className="text-header-1 mb-4 text-4xl md:text-8xl font-semibold">
               Application utility and purpose in a sentence.
             </h1>
-            <p className="text-body mb-2">
+            <p className="text-body mb-2 text-xl">
               Explain the purpose, utility, and function of the application in a
               single sentence in greater detail for the user to understand and
               follow.
             </p>
-            <p className="text-sm text-secondary-brown mb-8">
+            <p className="text-sm md:text-lg text-secondary-brown mb-8">
               Disclaimer: This is not a replacement for receiving professional
               treatment. Redirect with hyperlink to Doctors & Clinic resources.
             </p>
-            <button className="text-white text-3xl font-bold bg-orange-500 py-3 px-8 rounded-full hover:opacity-90 transition-opacity">
-              Start Scanning
-            </button>
+            <div className="flex justify-center md:justify-start">
+              <button className="text-white text-2xl md:text-3xl font-bold bg-orange-500 py-2 md:py-3 px-4 md:px-8 rounded-full hover:opacity-90 transition-opacity">
+                Start Scanning
+              </button>
+            </div>
           </div>
           {/* Image */}
-          <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0 relative">
+          <div className="md:w-1/2 flex justify-center items-center relative">
             <img
               src="/assets/creative-young-adult-cropped.png"
               alt="Melanoma detection concept"
-              className="max-w-full h-auto md:max-w-md lg:max-w-lg rounded-3xl"
+              className="w-60 md:w-auto max-w-full h-auto md:max-w-md lg:max-w-lg rounded-3xl"
             />
             <img src="assets/brown-circle.svg" alt="Brown Circle" className="absolute w-full h-full -rotate-6" />
           </div>
@@ -62,14 +64,14 @@ export const Hero = () => {
       </div>
 
       {/* Learn More - at the bottom of the section */}
-      <div className="pb-10 text-center">
+      <div className="flex flex-col pb-10 text-center justify-center items-center">
         <a
           href="#why-we-matter"
           onClick={handleLearnMoreClick}
-          className="text-main-brown text-lg hover:text-orange-500 transition-colors inline-flex items-center"
+          className="text-main-brown text-lg md:text-2xl hover:text-orange-500 transition-colors flex flex-col items-center"
         >
           Learn More
-          <ArrowDownIcon className="w-5 h-5 inline-block ml-2" />
+          <ArrowDownIcon className="w-5 md:w-8 h-5 md:h-8 inline-block ml-2" />
         </a>
       </div>
     </section>
