@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import fileSvg from '../../images/file.svg';
+import remove from '../../images/remove.svg';
 export default function Upload() {
   const [uploadedFile, setUploadedFile] = useState(null);
   const [fileError, setFileError] = useState(null);
@@ -57,11 +58,16 @@ export default function Upload() {
       </div>
       {!uploadedFile && fileError && (
         <p className='w-fit text-left ml-[5%] mt-1 px-2 py-1 bg-[#FFC8C0] text-[#FF0F0F] rounded max-w-[90%]'>
-          Upload Failed: Maximum file size of 1 MB reached
+          Upload Failed: Maximum file size of 15 MB reached
         </p>
       )}
       {!fileError && uploadedFile && (
-        <div className='text-left pl-[5%] pt-1'>
+        <div className='w-fit bg-[#B59988] text-[#51210D] text-left ml-[5%] px-2 py-1 mt-1 rounded flex flex-row'>
+          <img
+            src={remove}
+            alt="remove"
+            className=''
+          />
           <button
             onClick={removeFile}
             className=''
