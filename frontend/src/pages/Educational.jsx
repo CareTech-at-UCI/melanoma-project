@@ -30,7 +30,7 @@ export const Educational = () => {
             <img 
               src="/educational/melanoma_back.jpg" 
               alt="A person examining a mole on their back" 
-              className="w-[720px] h-[408px]"
+              className="w-full max-w-[720px] max-h-[408px]"
             />
           </div>
         </div>
