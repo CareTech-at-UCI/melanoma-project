@@ -21,7 +21,7 @@ export const Educational = () => {
             <h2 className="text-4xl font-semibold mb-4 pl-8">
               What <i>is</i> Melanoma?
             </h2>
-            <p className="text-lg leading-relaxed pl-8">
+            <p className="text-lg leading-relaxed">
               Melanoma is a type of skin cancer that develops when melanocytes, cells that give skin its tan or brown color, begin growing uncontrollably. Though less common compared to other types of skin cancers, melanoma is significantly more dangerous because of its high likelihood to spread to other parts of the body if not found and treated early on (American Cancer Society).
             </p>
           </div>
