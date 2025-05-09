@@ -1,0 +1,114 @@
+@media (min-width: 1024px) {
+  .navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    padding-top: 3.5%;
+    padding-bottom: 5%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    background-color: #f0efed;
+    padding-top: 9%;
+  }
+
+  .navbar .bar-header {
+    padding-right: 8%;
+    padding-bottom: 3%;
+  }
+
+  .navbar .logo {
+    white-space: normal;
+    font-size: 26px;
+    line-height: 1.2;
+    text-align: center;
+    width: 30%;
+    padding-left: 7%;
+    padding-right: 7%;
+    color: #4e3629;
+    background-color: #f0efed;
+  }
+
+  .navbar .hamburger-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .navbar {
+    background-color: #ffffff !important;
+  }
+
+  .navbar .mobile-menu {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar .mobile-menu a {
+    font-size: 21px;
+    color: #4e3629;
+    padding: 3.5% 0;
+    text-align: center;
+    border-bottom: 1px solid #f0efed;
+  }
+
+  .navbar .scan-button,
+  .navbar .mobile-scan-button {
+    display: none !important;
+  }
+}
+
+.navbar a1 {
+  font-family: "Gantari", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #4e3629;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a {
+  font-family: "Gantari", sans-serif;
+  font-weight: 300;
+  color: #4e3629;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .navbar a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar a {
+    font-size: 20px;
+  }
+}
+
+.navbar .scan-button {
+  background-color: #c24a00;
+  color: #ffffff;
+  width: 84px;
+  height: 45px;
+  border-radius: 50px;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: "Gantari", sans-serif;
+  font-weight: 300;
+  font-size: 23px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .scan-button:hover {
+  background-color: #a74000;
+  color: #f0efed;
+}

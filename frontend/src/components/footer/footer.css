@@ -1,0 +1,12 @@
+/* Default Footer Styling for Larger Screens */
+.footer-text {
+  font-size: 16px; /* Default font size for larger screens */
+  color: #4e3629; /* Text color for footer */
+}
+
+/* Mobile Screen Adjustments */
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: 11px; /* Smaller font size for mobile screens */
+  }
+}
