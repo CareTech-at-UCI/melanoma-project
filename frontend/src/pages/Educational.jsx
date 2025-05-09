@@ -8,14 +8,14 @@ export const Educational = () => {
         <div></div>
 
         {/* ABCDE of Skin Cancer */}
-        <div className="bg-[rgba(240,239,237,1)] px-[106px] py-[70px]">
+        <div className="bg-[rgba(240,239,237,1)] px-12 py-12 md:px-16 md:py-12 lg:px-[106px] lg:py-[70px]">
             <img src="/educational/doubleLoopLine.png" alt="double loop line" />
             <div className="flex flex-col gap-8">
               <div>
                 <h2 className="text-header-2">ABCDE of Skin Cancer</h2>
                 <p className="text-lg">A straightforward way to identify early melanoma risk and take steps to prevent further skin damage.</p>
               </div>
-              <div className="flex gap-8">
+              <div className="flex flex-row flex-wrap gap-8 justify-center lg:justify-between">
                   <AbcdeCard
                     letter="A" 
                     imageSrc="/educational/asymmetric.jpg" 
