@@ -3,39 +3,41 @@ import { AbcdeCard } from '../components/educational/AbcdeCard';
 
 export const Educational = () => {
   return (
-    <div className="font-gantari text-main-brown">
-      <div className="max-w-xl mx-auto text-center pt-24">
-        <h1 className="text-4xl font-semibold mb-4">
-          Learn About Melanoma
-        </h1>
-        <img
-        src="/educational/line.png" 
-        alt="A person examining a mole on their back" 
-        className="rounded-md max-w-xs mx-auto text-center"
-        />
-      </div>
-      
-
-      <div className="bg-gradient-to-b px-8 py-12 flex flex-col md:flex-row items-center justify-between">
-        <div className="max-w-xl from-white to-[#F0EFED]">
-          <h2 className="text-4xl font-semibold mb-4 pl-8">
-            What <i>is</i> Melanoma?
-          </h2>
-          <p className="text-lg leading-relaxed">
-            Melanoma is a type of skin cancer that develops when melanocytes, cells that give skin its tan or brown color, begin growing uncontrollably. Though less common compared to other types of skin cancers, melanoma is significantly more dangerous because of its high likelihood to spread to other parts of the body if not found and treated early on (American Cancer Society).
-          </p>
-        </div>
-        <div className="mt-8 md:mt-0 md:ml-12">
-          <img 
-            src="/educational/melanoma_back.jpg" 
+    <div className="font-gantari text-main-brown bg-[rgba(240,239,237,1)]">
+      {/* Learn About Melanoma */}
+      <div style={{ backgroundImage: "url('/educational/gradient-bg.png')" }} className="bg-cover bg-center">
+        <div className="mx-auto text-center pt-24">
+          <h1 className="text-[40px] font-medium">
+            Learn About Melanoma
+          </h1>
+          <img
+            src="/educational/curlyLine.png" 
             alt="A person examining a mole on their back" 
-            className="max-w-xl"
+            className="max-w-xs mx-auto"
           />
         </div>
-      </div>
 
+        <div className="pl-12 pt-12 md:pl-16 lg:pl-[106px] flex flex-col md:flex-row items-center justify-between">
+          <div className="max-w-xl">
+            <h2 className="text-header-2">
+              What <i>is</i> Melanoma?
+            </h2>
+            <p className="text-xl font- leading-relaxed">
+              Melanoma is a type of skin cancer that develops when melanocytes, cells that give skin its tan or brown color, begin growing uncontrollably. Though less common compared to other types of skin cancers, melanoma is significantly more dangerous because of its high likelihood to spread to other parts of the body if not found and treated early on (American Cancer Society).
+            </p>
+          </div>
+          <div className="mt-8 md:mt-0 md:ml-12">
+            <img 
+              src="/educational/melanoma_back.jpg" 
+              alt="A person examining a mole on their back" 
+              className="w-[720px] h-[408px]"
+            />
+          </div>
+        </div>
+      </div>
+      
       {/* ABCDE of Skin Cancer */}
-      <div className="bg-[rgba(240,239,237,1)] px-12 py-12 md:px-16 md:py-12 lg:px-[106px] lg:py-[70px]">
+      <div className="px-12 py-12 md:px-16 md:py-12 lg:px-[106px] lg:py-[70px]">
         <img src="/educational/doubleLoopLine.png" alt="double loop line" />
         <div className="flex flex-col gap-8">
           <div>
