@@ -31,7 +31,7 @@ export const Scan = () => {
                 </div>
 
                 {/*upload-image-component*/}
-                <div className="bg-[#F5F5F5] w-[289px] h-[222px] md:w-[994px] md:h-[417px]">
+                <div className="bg-[#F5F5F5] w-[289px] h-[222px] md:w-[994px] md:h-[417px] border-2 border-solid border-[#B59988] rounded-xl min-h-fit">
                     <p className='font-gantari text-main-brown pl-[5%] pt-[5%]'>Upload Image</p>
                     <Upload/>
                 </div>
