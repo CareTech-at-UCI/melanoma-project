@@ -29,30 +29,30 @@ export const Hero = () => {
   return (
     <section className="text-main-brown min-h-screen flex flex-col">
       {/* Main Content Area - centered */}
-      <div className="flex-grow flex items-center justify-center p-8 md:p-16">
-        <div className="container mx-auto flex flex-col md:flex-row items-center sm:gap-5 lg:gap-24 md:gap-5">
+      <div className="flex-grow flex items-center justify-center p-8 lg:p-10 md:p-10">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
           {/* Text Content */}
-          <div className="w-full md:w-7/12 text-left space-y-6 md:space-y-8">
-            <h1 className="text-header-1 mb-4 text-4xl lg:text-6xl md:text-8xl font-semibold">
+          <div className="w-full md:w-1/2 text-left">
+            <h1 className="mb-8 text-4xl lg:text-header-1 md:text-header-1 lg:font-bold md:font-bold sm:font-bold"> {/* Have to add repeated font-bold because of other font overriding */}
               Application utility and purpose in a sentence.
             </h1>
-            <p className="text-body mb-2 text-xl">
+            <p className="text-body text-xl mb-6">
               Explain the purpose, utility, and function of the application in a
               single sentence in greater detail for the user to understand and
               follow.
             </p>
-            <p className="text-sm md:text-lg font-light text-body-3 mb-8">
+            <p className="lg:text-body-3 md:text-lg mb-8">
               Disclaimer: This is not a replacement for receiving professional
               treatment. Redirect with hyperlink to Doctors & Clinic resources.
             </p>
             <div className="flex justify-center md:justify-start">
-              <button className="text-white text-2xl md:text-3xl font-bold bg-orange-500 py-2 md:py-3 px-4 md:px-8 rounded-full hover:opacity-90 transition-opacity">
+              <button className="text-white text-2xl lg:text-header-4 md:text-3xl font-bold bg-orange-500 py-2 lg:py-1 md:py-3 px-4 lg:px-6 md:px-8 rounded-full hover:opacity-90 transition-opacity">
                 Start Scanning
               </button>
             </div>
           </div>
           {/* Image */}
-          <div className="lg:w-[350px] md:w-1/2 flex justify-center items-center relative">
+          <div className="lg:w-5/12 md:w-1/2 flex justify-center items-center relative">
             <img
               src="/assets/creative-young-adult-cropped.png"
               alt="Melanoma detection concept"

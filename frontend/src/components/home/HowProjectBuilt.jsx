@@ -12,7 +12,7 @@ export const HowProjectBuilt = () => {
   ];
 
   return (
-    <section className="h-[90vh] md:h-[70vh] text-main-brown py-16 lg:mb-60 md:py-24 p-8 md:p-16">
+    <section className="text-main-brown py-16 lg:mb-60 md:py-24 p-8 md:p-16">
       <div className="container mx-auto text-center">
         <h2 className="text-header-2 lg:text-header-2 md:text-header-1 mb-4">How the Project was Built</h2>
         <p className="lg:text-body-2 text-body-1 text-base md:text-2xl text-secondary-brown mb-6 max-w-7xl mx-auto">

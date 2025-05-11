@@ -14,7 +14,7 @@ module.exports = {
         cream: "#F5F5F5",
       },
       fontSize: {
-        "main-title": ["64px", { letterSpacing: "-0.03em", fontWeight: "600" }],
+        "main-title": ["60px", { letterSpacing: "-0.03em", fontWeight: "600" }],
         subtitle: ["48px", { letterSpacing: "-0.03em", fontWeight: "600" }],
         "header-1": ["48px", { letterSpacing: "-0.03em", fontWeight: "500" }],
         "header-2": ["36px", { letterSpacing: "-0.03em", fontWeight: "500" }],
