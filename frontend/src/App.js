@@ -10,16 +10,14 @@ function App() {
     <div className="min-h-screen flex flex-col">
       <Router>
         <Navbar />
-        <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </div>
+          <div className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/scan" element={<Scan />} />
+           </Routes>
+          </div>
         <Footer />
-        <Routes>
-        <Route path="/scan" element={<Scan />} />
-      </Routes>
-    </Router>
+      </Router>
     </div>
   );
 }

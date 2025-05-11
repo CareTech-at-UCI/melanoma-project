@@ -1,6 +1,6 @@
 @media (min-width: 1024px) {
   .navbar {
-    background-color: #ffffff; 
+    background-color: transparent; 
     transition: background-color 0.3s ease;
     align-items: center;
     padding-top: 2%;
@@ -10,7 +10,7 @@
 
 @media (min-width: 760px) and (max-width: 1023px) {
   .navbar {
-    background-color: #ffffff; /* TODO: Choose to make transparent or the high-fi color*/
+    background-color: transparent; /* TODO: Choose to make transparent or the high-fi color*/
     padding-top: 3%;
   }
 
@@ -39,7 +39,7 @@
   }
 
   .navbar .logo {
-    background-color: #ffffff;
+    background-color: transparent;
     white-space: normal;
     font-size: 20px;
     line-height: 1.2;
