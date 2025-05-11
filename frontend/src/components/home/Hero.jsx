@@ -30,10 +30,10 @@ export const Hero = () => {
     <section className="text-main-brown min-h-screen flex flex-col">
       {/* Main Content Area - centered */}
       <div className="flex-grow flex items-center justify-center p-8 md:p-16">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-5 md:gap-12">
+        <div className="container mx-auto flex flex-col md:flex-row items-center sm:gap-5 lg:gap-24 md:gap-5">
           {/* Text Content */}
-          <div className="w-full md:w-1/2 text-left space-y-6 md:space-y-8">
-            <h1 className="text-header-1 mb-4 text-4xl md:text-8xl font-semibold">
+          <div className="w-full md:w-7/12 text-left space-y-6 md:space-y-8">
+            <h1 className="text-header-1 mb-4 text-4xl lg:text-6xl md:text-8xl font-semibold">
               Application utility and purpose in a sentence.
             </h1>
             <p className="text-body mb-2 text-xl">
@@ -41,7 +41,7 @@ export const Hero = () => {
               single sentence in greater detail for the user to understand and
               follow.
             </p>
-            <p className="text-sm md:text-lg text-secondary-brown mb-8">
+            <p className="text-sm md:text-lg font-light text-body-3 mb-8">
               Disclaimer: This is not a replacement for receiving professional
               treatment. Redirect with hyperlink to Doctors & Clinic resources.
             </p>
@@ -52,7 +52,7 @@ export const Hero = () => {
             </div>
           </div>
           {/* Image */}
-          <div className="md:w-1/2 flex justify-center items-center relative">
+          <div className="lg:w-[350px] md:w-1/2 flex justify-center items-center relative">
             <img
               src="/assets/creative-young-adult-cropped.png"
               alt="Melanoma detection concept"

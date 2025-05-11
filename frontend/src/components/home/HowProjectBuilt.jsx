@@ -12,16 +12,16 @@ export const HowProjectBuilt = () => {
   ];
 
   return (
-    <section className="h-[90vh] md:h-[70vh] text-main-brown py-16 md:py-24 p-8 md:p-16">
+    <section className="h-[90vh] md:h-[70vh] text-main-brown py-16 lg:mb-60 md:py-24 p-8 md:p-16">
       <div className="container mx-auto text-center">
-        <h2 className="text-header-2 md:text-header-1 mb-4">How the Project was Built</h2>
-        <p className="text-body text-base md:text-2xl text-secondary-brown mb-6 max-w-7xl mx-auto">
+        <h2 className="text-header-2 lg:text-header-2 md:text-header-1 mb-4">How the Project was Built</h2>
+        <p className="lg:text-body-2 text-body-1 text-base md:text-2xl text-secondary-brown mb-6 max-w-7xl mx-auto">
           An explanation of how the project was built for its purposes but also
           for the purpose of teaching students. Include all information about
           how the project was built.
         </p>
 
-        <div className="flex justify-center items-center flex-wrap mb-6 gap-4 md:gap-8">
+        <div className="flex justify-center items-center flex-wrap mb-6 gap-4 md:gap-8 lg:pt-10">
           {technologies.map((tech) => (
             <div
               key={tech.alt}
@@ -40,7 +40,7 @@ export const HowProjectBuilt = () => {
           ))}
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-[#C24A00]">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-[#C24A00] lg:pt-10">
           {/* ! LINK TO RIGHT THING */}
           <Link
             to="/team"
