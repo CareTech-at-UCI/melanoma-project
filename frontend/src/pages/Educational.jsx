@@ -17,7 +17,7 @@ export const Educational = () => {
           />
         </div>
 
-        <div className="p-8 pt-12 md:pl-16 lg:pl-[106px] flex flex-col md:flex-row items-center justify-between">
+        <div className="p-10 md:p-0 pt-12 md:pl-16 lg:pl-[106px] flex flex-col md:flex-row items-center justify-between">
           <div className="max-w-xl">
             <h2 className="text-header-2">
               What <i>is</i> Melanoma?
