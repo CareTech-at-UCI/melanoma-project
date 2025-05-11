@@ -9,8 +9,8 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="navbar lg:py-4">
-      <div className="container mx-auto lg:px-4 sm:px-0">
+    <nav className="navbar">
+      <div className="w-full mx-auto px-0 md:px-6 lg:px-8">
         <div className="bar-header flex justify-between items-center">
           {/* Logo with Two Lines on Mobile */}
           <a1 href="/" className="logo">
@@ -20,7 +20,7 @@ export const Navbar = () => {
           {/* Hamburger Icon with Larger Size on Mobile */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden text-main-brown focus:outline-none"
+            className="md:hidden text-main-brown focus:outline-none"
           >
             <svg
               className="hamburger-icon"
@@ -40,7 +40,7 @@ export const Navbar = () => {
           </button>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex justify-center items-center space-x-8">
+          <div className="hidden md:flex justify-center items-center space-x-8">
             <a href="/" className="text-main-brown">
               Home
             </a>
@@ -56,7 +56,7 @@ export const Navbar = () => {
           </div>
 
           {/* Desktop Scan Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
             <a href="/" className="scan-button">
               Scan
             </a>
@@ -64,7 +64,7 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden ${isOpen ? "block" : "hidden"} mobile-menu`}>
+        <div className={`md:hidden ${isOpen ? "block" : "hidden"} mobile-menu`}>
           <div className="mobile-nav flex flex-col">
             <a href="/" className="mobile-menu-item">
               Home

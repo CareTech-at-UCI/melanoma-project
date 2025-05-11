@@ -1,44 +1,61 @@
 @media (min-width: 1024px) {
   .navbar {
-    background-color: transparent;
+    background-color: #f0efed; 
     transition: background-color 0.3s ease;
     align-items: center;
-    padding-top: 3.5%;
-    padding-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     justify-content: space-between;
   }
 }
 
-@media (max-width: 768px) {
-  .navbar .container {
-    background-color: #f0efed;
-    padding-top: 9%;
-  }
-
-  .navbar .bar-header {
-    padding-right: 8%;
-    padding-bottom: 3%;
+@media (min-width: 760px) and (max-width: 1023px) {
+  .navbar {
+    background-color: #f0efed; /* TODO: Choose to make transparent or the high-fi color*/
+    padding-top: 3%;
+    padding-bottom: 1%;
   }
 
   .navbar .logo {
+    font-size: 19px;
+    text-align: left;
+  }
+
+  .hamburger-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .navbar {
+    background-color: #ffffff;
+    padding-top: 5%;
+  }
+
+  .navbar .bar-header {
+    background-color: #ffffff;
+    padding-right: 8%;
+    padding-bottom: 3.5%;
+    align-items: center;
+  }
+
+  .navbar .logo {
+    background-color: #ffffff;
     white-space: normal;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 1.2;
     text-align: center;
     width: 30%;
     padding-left: 7%;
     padding-right: 7%;
     color: #4e3629;
-    background-color: #f0efed;
   }
 
   .navbar .hamburger-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .navbar {
-    background-color: #ffffff !important;
+    width: 40px;
+    height: 40px;
   }
 
   .navbar .mobile-menu {
@@ -48,7 +65,7 @@
   }
 
   .navbar .mobile-menu a {
-    font-size: 21px;
+    font-size: 20px;
     color: #4e3629;
     padding: 3.5% 0;
     text-align: center;
@@ -58,13 +75,19 @@
   .navbar .scan-button,
   .navbar .mobile-scan-button {
     display: none !important;
+    font-size: 20px;
   }
 }
+
+/* USE THIS IF BACKGROUND WILL BE SAME COLOR */
+/* .navbar {
+  background-color: #f0efed !important;
+} */
 
 .navbar a1 {
   font-family: "Gantari", sans-serif;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   color: #4e3629;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -84,17 +107,17 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .navbar a {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 
 .navbar .scan-button {
   background-color: #c24a00;
   color: #ffffff;
-  width: 84px;
-  height: 45px;
+  width: 70px;
+  height: 35px;
   border-radius: 50px;
   padding: 8px 10px;
   display: flex;
@@ -103,7 +126,7 @@
   gap: 8px;
   font-family: "Gantari", sans-serif;
   font-weight: 300;
-  font-size: 23px;
+  font-size: 20px;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
