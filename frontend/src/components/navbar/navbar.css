@@ -1,0 +1,134 @@
+@media (min-width: 1024px) {
+  .navbar {
+    background-color: transparent; 
+    transition: background-color 0.3s ease;
+    align-items: center;
+    padding-top: 2%;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1023px) {
+  .navbar {
+    background-color: transparent; /* TODO: Choose to make transparent or the high-fi color*/
+    padding-top: 3%;
+  }
+
+  .navbar .logo {
+    font-size: 19px;
+    text-align: left;
+  }
+
+  .hamburger-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .navbar {
+    background-color: #ffffff;
+    padding-top: 5%;
+  }
+
+  .navbar .bar-header {
+    background-color: #ffffff;
+    padding-right: 8%;
+    align-items: center;
+  }
+
+  .navbar .logo {
+    background-color: transparent;
+    white-space: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    width: 30%;
+    padding-left: 7%;
+    padding-right: 7%;
+    color: #4e3629;
+  }
+
+  .navbar .hamburger-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar .mobile-menu {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar .mobile-menu a {
+    font-size: 20px;
+    color: #4e3629;
+    padding: 3.5% 0;
+    text-align: center;
+    border-bottom: 1px solid #f0efed;
+  }
+
+  .navbar .scan-button,
+  .navbar .mobile-scan-button {
+    display: none !important;
+    font-size: 20px;
+  }
+}
+
+/* USE THIS IF BACKGROUND WILL BE SAME COLOR */
+/* .navbar {
+  background-color: #f0efed !important;
+} */
+
+.navbar a1 {
+  font-family: "Gantari", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #4e3629;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a {
+  font-family: "Gantari", sans-serif;
+  font-weight: 300;
+  color: #4e3629;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .navbar a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar a {
+    font-size: 19px;
+  }
+}
+
+.navbar .scan-button {
+  background-color: #c24a00;
+  color: #ffffff;
+  width: 70px;
+  height: 35px;
+  border-radius: 50px;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: "Gantari", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .scan-button:hover {
+  background-color: #a74000;
+  color: #f0efed;
+}
