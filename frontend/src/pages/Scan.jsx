@@ -32,15 +32,11 @@ export const Scan = () => {
                     <StepCard title="Step 2: Upload Photo" description="Click “Upload” and select the photo from your photo library or files. Click “Submit”." icon={UploadIcon}/>
                     {/*Step 3*/}
                     <StepCard title="Step 3: Receive Results" description="You will be provided with an assessment of your skin alongside the confidence level of the identification." icon={CheckIcon}/>
-                </div>
-
-                {/*upload-image-component*/}
-                
-                <Upload/>
-                
+                </div>                
             </div>
         </div>
-    </div> 
+    </div>
+    <Upload/> 
     </>
   )
 };
