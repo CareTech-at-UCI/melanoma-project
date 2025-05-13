@@ -29,7 +29,7 @@ export const Hero = () => {
   return (
     <section className="text-main-brown min-h-screen flex flex-col">
       {/* Main Content Area - centered */}
-      <div className="flex-grow flex items-center justify-center p-8 lg:p-10 md:p-10">
+      <div className="flex-grow flex items-center justify-center p-8 lg:p-10">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
           {/* Text Content */}
           <div className="w-full md:w-1/2 text-left">
@@ -62,9 +62,8 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-
       {/* Learn More - at the bottom of the section */}
-      <div className="flex flex-col pb-10 text-center justify-center items-center">
+      <div className="flex flex-col pb-24 text-center justify-center items-center">
         <a
           href="#why-we-matter"
           onClick={handleLearnMoreClick}
