@@ -5,7 +5,7 @@ const StepCard = ({title, description, icon: Icon }) => {
         <div className="
             bg-cream
             w-full
-            lg:w-[326px]
+            md:w-[350px]
             rounded-[8px] 
             p-[1.5%] 
             shadow-[0px_8px_8px_0px_rgba(0,0,0,0.15)]
