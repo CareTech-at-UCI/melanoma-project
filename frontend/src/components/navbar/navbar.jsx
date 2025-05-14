@@ -50,14 +50,14 @@ export const Navbar = () => {
             <a href="/" className="text-main-brown">
               Credits
             </a>
-            <a href="/" className="text-main-brown">
+            <a href="/educational" className="text-main-brown">
               Education
             </a>
           </div>
 
           {/* Desktop Scan Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="/" className="scan-button">
+            <a href="/scan" className="scan-button">
               Scan
             </a>
           </div>
@@ -75,10 +75,10 @@ export const Navbar = () => {
             <a href="/" className="mobile-menu-item">
               Credits
             </a>
-            <a href="/" className="mobile-menu-item">
+            <a href="/educational" className="mobile-menu-item">
               Education
             </a>
-            <a href="/" className="scan-button mobile-scan-button">
+            <a href="/scan" className="scan-button mobile-scan-button">
               Scan
             </a>
           </div>
