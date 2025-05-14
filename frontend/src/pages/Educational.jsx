@@ -123,7 +123,7 @@ export const Educational = () => {
         <img
           src="/educational/doubleLoopLineWhiteAlt.png"
           alt="white looped line"
-          className="absolute left-0 bottom-[-10px] md:bottom-[80px] w-3/5 md:w-auto z-20"
+          className="absolute left-0 bottom-[-10px] lg:bottom-[80px] w-3/5 md:w-auto z-20"
         />
         <h2 className="text-header-2">Additional Resources</h2>
         <img
@@ -158,13 +158,13 @@ export const Educational = () => {
           />
         </div>
         <div className="absolute bottom-0 left-0 w-full">
-    <img
-      src="/educational/wave.png"
-      alt="wavy divider"
-      className="w-full h-auto object-cover"
-    />
-  </div>
-</div>
+          <img
+            src="/educational/wave.png"
+            alt="wavy divider"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
 
       {/* Examples of Melanoma */}
       <div className="relative pt-16 pb-20 md:pb-36 px-5 text-center">
@@ -177,7 +177,7 @@ export const Educational = () => {
           <img
             src="/educational/skin_lesion.png"
             alt="skin lesion"
-            className="h-[194px] w-[292px] rounded-[4px] border border-[#B59988] hidden md:inline-block"
+            className="h-[194px] w-[292px] rounded-[4px] border border-[#B59988] hidden lg:inline-block"
           />
           <img
             src="/educational/skin_lesion1.png"
@@ -187,7 +187,7 @@ export const Educational = () => {
           <img
             src="/educational/skin_lesion2.png"
             alt="skin lesion"
-            className="h-[194px] w-[292px] rounded-[4px] border border-[#B59988] hidden md:inline-block"
+            className="h-[194px] w-[292px] rounded-[4px] border border-[#B59988] hidden lg:inline-block"
           />
         </div>
         <div className="flex justify-center items-center md:py-6">
