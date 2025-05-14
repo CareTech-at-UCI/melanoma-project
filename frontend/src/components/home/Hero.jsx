@@ -32,7 +32,7 @@ export const Hero = () => {
       <div className="flex-grow flex items-center justify-center p-8 lg:p-10">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
           {/* Text Content */}
-          <div className="w-full md:w-1/2 text-left">
+          <div className="w-full md:w-1/2 text-left mt-20">
             <h1 className="mb-8 text-4xl lg:text-header-1 md:text-header-1 lg:font-bold md:font-bold sm:font-bold"> {/* Have to add repeated font-bold because of other font overriding */}
               Application utility and purpose in a sentence.
             </h1>
@@ -52,13 +52,13 @@ export const Hero = () => {
             </div>
           </div>
           {/* Image */}
-          <div className="lg:w-5/12 md:w-1/2 flex justify-center items-center relative">
+          <div className="lg:w-5/12 md:w-1/2 flex justify-center items-center relative mt-20">
             <img
               src="/assets/creative-young-adult-cropped.png"
               alt="Melanoma detection concept"
               className="w-60 md:w-full h-auto rounded-3xl"
             />
-            <img src="assets/brown-circle.svg" alt="Brown Circle" className="absolute w-full h-full -rotate-6" />
+            <img src="assets/brown-circle.svg" alt="Brown Circle" className="absolute w-full h-full -rotate-6 mt-10" />
           </div>
         </div>
       </div>

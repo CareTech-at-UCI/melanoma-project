@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="w-full mx-auto px-0 md:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-0 md:px-6 lg:px-8">
         <div className="bar-header flex justify-between items-center">
           {/* Logo with Two Lines on Mobile */}
           <a1 href="/" className="logo">
@@ -64,7 +64,7 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden ${isOpen ? "block" : "hidden"} mobile-menu`}>
+        <div className={`md:hidden ${isOpen ? "open" : ""} mobile-menu`}>
           <div className="mobile-nav flex flex-col">
             <a href="/" className="mobile-menu-item">
               Home
