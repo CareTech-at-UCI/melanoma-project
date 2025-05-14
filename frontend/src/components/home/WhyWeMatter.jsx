@@ -10,7 +10,7 @@ export const WhyWeMatter = () => {
         {/* Text Content */}
         <div className="md:w-full p-0 md:px-20 text-left space-y-5">
           <h2 className="text-header-2 lg:text-header-3 lg:font-semibold md:text-header-3 md:font-bold">Why <i>We</i> Matter.</h2>
-          <p className="text-body text-base lg:text-body-2 lg:text-0xl md:text-body-2">
+          <p className="text-body text-lg lg:text-body-2 lg:text-xl md:text-body-2">
             A paragraph about why the application is important and any
             additional information related to it. This will be as long or as
             short as you need it.
