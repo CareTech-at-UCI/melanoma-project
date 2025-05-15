@@ -4,9 +4,10 @@ import defaultImage from "../images/img_348.png";
 export const Results = ({
   imagePath = defaultImage,
   imageName = "img_348.png",
+  result = 95,
 }) => {
   // Example confidence values
-  const confidence = 95;
+  const confidence = result;
   const modelAccuracy = 85;
   const [showConfidenceInfo, setShowConfidenceInfo] = useState(false);
 
@@ -22,7 +23,7 @@ export const Results = ({
         text: (
           <>
             Based on our analytics, we are{" "}
-            <span className="font-bold">75% confident</span> that{" "}
+            <span className="font-bold">{value}% confident</span> that{" "}
             <span className="font-bold">melanoma may have been identified</span>{" "}
             from the provided image. We suggest that the person in the image
             seeks{" "}
@@ -37,7 +38,7 @@ export const Results = ({
         text: (
           <>
             Based on our analytics, we are{" "}
-            <span className="font-bold">40% confident</span> that melanoma has
+            <span className="font-bold">{value}% confident</span> that melanoma has
             been identified from the provided image. Therefore, there is a
             <span className="font-bold">possible chance</span> that the image
             provided may contain melanoma. Please scan again and follow up with{" "}
@@ -63,11 +64,11 @@ export const Results = ({
   const message = getConfidenceMessage(confidence);
 
   return (
-    <div className="min-h-screen pb-20 font-gantari bold bg-transparent text-[#51210D]">
+    <div className="min-h-screen pb-20 font-gantari bold bg-transparent text-main-brown">
       {/* Main Container */}
-      <div className="w-full max-w-7xl mx-auto px-4 pt-20 md:pt-28">
+      <div className="w-full max-w-7xl mx-auto px-4 pt-20 md:pt-40">
         {/* Header */}
-        <h1 className="fontbold text-4xl md:text-5xl mb-4">Scan Results</h1>
+        <h1 className="fontbold text-4xl md:text-5xl mb-8">Scan Results</h1>
 
         {/* Content Container */}
         <div className="flex flex-col md:flex-row md:gap-8">
@@ -88,10 +89,10 @@ export const Results = ({
           </div>
 
           {/* Right Column - Info Section */}
-          <div className="w-full md:w-[60%]">
+          <div className="w-full md:w-[60%] md: -mt-8">
             {/* Statistics Section */}
-            <div className="mb-8">
-              <h2 className="text-3xl mb-6 font-bold">Statistics</h2>
+            <div className="mb-4">
+              <h2 className="text-results-header-2 mb-6">Statistics</h2>
               <div className="flex justify-center md:justify-start gap-16">
                 <div className="text-center">
                   <div
@@ -113,15 +114,15 @@ export const Results = ({
             </div>
 
             {/* Next Steps Section */}
-            <div className="mb-8">
-              <h2 className="text-3xl mb-6 font-bold">Next Steps</h2>
+            <div className="mb-2">
+              <h2 className="text-results-header-2 mb-6">Next Steps</h2>
               <div className="border border-[#B59988] bg-transparent rounded-lg p-6">
                 <p className="text-base md:text-lg">{message.text}</p>
               </div>
             </div>
 
             {/* Confidence Level Info */}
-            <div className="mb-8 relative">
+            <div className="mb-4 relative">
               <button
                 onClick={() => setShowConfidenceInfo(!showConfidenceInfo)}
                 className="flex items-center text-sm hover:opacity-80"
@@ -142,10 +143,10 @@ export const Results = ({
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-end">
-              <button className="w-full sm:w-auto bg-white text-[#E06929] border border-[#E06929] px-6 py-3 rounded-full hover:bg-[#E06929] hover:text-white transition-colors text-center text-lg">
+              <button className="w-full sm:w-auto bg-white text-[#E06929] border border-[#E06929] px-6 py-2 rounded-full hover:bg-[#E06929] hover:text-white transition-colors text-center text-lg">
                 Continue Scanning
               </button>
-              <button className="w-full sm:w-auto bg-[#E06929] text-white px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-center text-lg">
+              <button className="w-full sm:w-auto bg-[#E06929] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity text-center text-lg">
                 Seek Help
               </button>
             </div>
