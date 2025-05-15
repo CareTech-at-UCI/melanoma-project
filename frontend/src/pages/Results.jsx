@@ -1,65 +1,157 @@
-import React from 'react'
-export const Results = () => {
+import React, { useState } from "react";
+import defaultImage from "../images/img_348.png";
+
+export const Results = ({
+  imagePath = defaultImage,
+  imageName = "img_348.png",
+}) => {
+  // Example confidence values
+  const confidence = 95;
+  const modelAccuracy = 85;
+  const [showConfidenceInfo, setShowConfidenceInfo] = useState(false);
+
+  const getConfidenceColor = (value) => {
+    if (value >= 75) return "text-[#E83A34]";
+    if (value >= 40) return "text-[#EDA200]";
+    return "text-[#80B700]";
+  };
+
+  const getConfidenceMessage = (value) => {
+    if (value >= 75) {
+      return {
+        text: (
+          <>
+            Based on our analytics, we are{" "}
+            <span className="font-bold">75% confident</span> that{" "}
+            <span className="font-bold">melanoma may have been identified</span>{" "}
+            from the provided image. We suggest that the person in the image
+            seeks{" "}
+            <span className="font-bold">professional medical attention</span> to
+            confirm any diagnoses.
+          </>
+        ),
+      };
+    }
+    if (value >= 40) {
+      return {
+        text: (
+          <>
+            Based on our analytics, we are{" "}
+            <span className="font-bold">40% confident</span> that melanoma has
+            been identified from the provided image. Therefore, there is a
+            <span className="font-bold">possible chance</span> that the image
+            provided may contain melanoma. Please scan again and follow up with{" "}
+            <span className="font-bold">professional medical</span> attention to
+            verify.
+          </>
+        ),
+      };
+    }
+    return {
+      text: (
+        <>
+          Based on our analytics, we are{" "}
+          <span className="font-bold">5% confident</span> that melanoma has been
+          identified from the provided image. Therefore, there is a high chance
+          that the image <span className="font-bold">does not contain</span>{" "}
+          melanoma.
+        </>
+      ),
+    };
+  };
+
+  const message = getConfidenceMessage(confidence);
+
   return (
-  <>
-    <div className="h-screen flex flex-col items-center justify-center pt-24">
-      <div className="w-[80%] h-[80%] flex flex-col items-center gap-8">
+    <div className="min-h-screen pb-20 font-gantari bold bg-transparent text-[#51210D]">
+      {/* Main Container */}
+      <div className="w-full max-w-7xl mx-auto px-4 pt-20 md:pt-28">
         {/* Header */}
-        <div className="text-left w-full h-[10%]">
-          <h1 className="font-gantari text-main-brown text-header-1">
-            Scan Results
-          </h1>
-        </div>
-        {/* Results */}
-        <div className="bg-off-white w-full h-[80%] flex flex-row items-center gap-8">
-          
-          {/* Image */}
-          <div className="w-[40%] h-full flex flex-col items-center justify-center gap-4">
-            {/* Image File*/}
-            <div className="bg-light-brown w-full h-[90%] flex items-center justify-center">
-              <h2 className="font-gantari text-main-brown text-header-2">
-                INSERT IMAGE HERE
-              </h2>
-            </div>
-            {/* Image Filename*/}
-            <div className="bg-light-brown w-full h-[10%] flex items-center">
-              <h2 className="font-gantari text-main-brown text-scan-header-5 text-left">
-                insert variable here image.jpg
-              </h2>
+        <h1 className="fontbold text-4xl md:text-5xl mb-4">Scan Results</h1>
+
+        {/* Content Container */}
+        <div className="flex flex-col md:flex-row md:gap-8">
+          {/* Left Column - Image Section */}
+          <div className="w-full md:w-[40%] mb-8 md:mb-0 flex flex-col">
+            {/* Filename - Shows first on mobile, last on desktop */}
+            <p className="mb-4 md:mb-0 md:mt-4 order-first md:order-last font-bold text-base">
+              {imageName}
+            </p>
+            {/* Image - Shows second on mobile, first on desktop */}
+            <div className="w-full aspect-[4/3] order-last md:order-first">
+              <img
+                src={imagePath}
+                alt="Scanned skin area"
+                className="w-full h-full object-cover rounded-lg border border-[#B59988]"
+              />
             </div>
           </div>
 
-          {/* Statistics */}
-          <div className="w-[60%] h-[100%] flex flex-col items-center justify-center gap-6">
-            {/* Header */}
-            <div className="bg-light-brown w-full h-[10%] flex items-center ">
-              <h2 className="font-gantari text-main-brown text-results-header-1 text-left">
-                Statistics
-              </h2>
-            </div>
-            {/* Percentages */}
-            <div className="bg-light-brown w-full h-[20%] flex flex-row items-center justify-center">
-              <h2 className="font-gantari text-main-brown text-results-header-1">
-                Percentages
-              </h2>
-            </div>
-            {/* Next Steps */}
-            <div className="bg-light-brown w-full h-[60%] flex items-center justify-center">
-              <h2 className="font-gantari text-main-brown text-results-header-1">
-                Next Steps
-              </h2>
-            </div>
-            {/* Buttons */}
-            <div className="bg-light-brown w-full h-[10%] flex items-center justify-center">
-              <h2 className="font-gantari text-main-brown text-results-header-1">
-                Buttons
-              </h2>
+          {/* Right Column - Info Section */}
+          <div className="w-full md:w-[60%]">
+            {/* Statistics Section */}
+            <div className="mb-8">
+              <h2 className="text-3xl mb-6 font-bold">Statistics</h2>
+              <div className="flex justify-center md:justify-start gap-16">
+                <div className="text-center">
+                  <div
+                    className={`text-5xl md:text-6xl font-black ${getConfidenceColor(
+                      confidence
+                    )}`}
+                  >
+                    {confidence}%
+                  </div>
+                  <div className="text-lg md:text-xl">Confidence</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-5xl md:text-6xl font-black text-[#E06929]">
+                    {modelAccuracy}%
+                  </div>
+                  <div className="text-lg md:text-xl">Model Accuracy</div>
+                </div>
+              </div>
             </div>
 
+            {/* Next Steps Section */}
+            <div className="mb-8">
+              <h2 className="text-3xl mb-6 font-bold">Next Steps</h2>
+              <div className="border border-[#B59988] bg-transparent rounded-lg p-6">
+                <p className="text-base md:text-lg">{message.text}</p>
+              </div>
+            </div>
+
+            {/* Confidence Level Info */}
+            <div className="mb-8 relative">
+              <button
+                onClick={() => setShowConfidenceInfo(!showConfidenceInfo)}
+                className="flex items-center text-sm hover:opacity-80"
+              >
+                <span className="mr-2">ⓘ</span>
+                What is confidence level?
+              </button>
+
+              {showConfidenceInfo && (
+                <div className="absolute left-0 top-full mt-2 w-72 p-4 bg-white border border-[#B59988] rounded-lg text-sm shadow-lg">
+                  Confidence level is a measure of certainty that a specific
+                  parameter lies within a certain range. 0-39 confidence
+                  indicates a low likeliness, 40-74 confidence indicates a
+                  medium likeliness, and 75+ indicates a high likeliness.
+                </div>
+              )}
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-end">
+              <button className="w-full sm:w-auto bg-white text-[#E06929] border border-[#E06929] px-6 py-3 rounded-full hover:bg-[#E06929] hover:text-white transition-colors text-center text-lg">
+                Continue Scanning
+              </button>
+              <button className="w-full sm:w-auto bg-[#E06929] text-white px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-center text-lg">
+                Seek Help
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </>
-  )
+  );
 };
