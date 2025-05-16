@@ -4,7 +4,7 @@ import defaultImage from "../images/img_348.png";
 export const Results = ({
   imagePath = defaultImage,
   imageName = "img_348.png",
-  result = 95,
+  result = 40,
 }) => {
   // Example confidence values
   const confidence = result;
@@ -64,11 +64,11 @@ export const Results = ({
   const message = getConfidenceMessage(confidence);
 
   return (
-    <div className="min-h-screen pb-20 font-gantari bold bg-transparent text-main-brown">
+    <div className="min-h-screen pb-20 font-gantari bold text-main-brown bg-off-white">
       {/* Main Container */}
-      <div className="w-[80%] md:w-full max-w-7xl mx-auto px-4 pt-28 md:pt-40">
+      <div className="w-[80%] md:w-full max-w-7xl mx-auto px-4 pt-28 md:pt-32">
         {/* Header */}
-        <h1 className="fontbold text-4xl md:text-5xl mb-8">Scan Results</h1>
+        <h1 className="fontbold text-4xl md:text-5xl mb-4 md:mb-8">Scan Results</h1>
 
         {/* Content Container */}
         <div className="flex flex-col md:flex-row md:gap-8">
@@ -93,7 +93,7 @@ export const Results = ({
             {/* Statistics Section */}
             <div className="mb-2 md:mb-4">
               <h2 className="text-results-header-3 md:text-results-header-2 test mb-2 md:mb-6 text-center md:text-left">Statistics</h2>
-              <div className="flex justify-center md:justify-start gap-16">
+              <div className="flex justify-center md:justify-start gap-8 md:gap-16">
                 <div className="text-center">
                   <div
                     className={`text-5xl md:text-6xl font-black ${getConfidenceColor(
@@ -116,7 +116,7 @@ export const Results = ({
             {/* Next Steps Section */}
             <div className="mb-2">
               <h2 className="text-results-header-3 md:text-results-header-2 text-center md:text-left mb-2 md:mb-6">Next Steps</h2>
-              <div className="border border-[#B59988] bg-transparent rounded-lg p-6">
+              <div className="border border-[#B59988] bg-transparent rounded-lg p-3 md:p-6">
                 <p className="text-base md:text-lg">{message.text}</p>
               </div>
             </div>
@@ -142,11 +142,11 @@ export const Results = ({
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-end">
-              <button className="w-full sm:w-auto bg-white text-[#E06929] border border-[#E06929] px-6 py-2 rounded-full hover:bg-[#E06929] hover:text-white transition-colors text-center text-lg">
+            <div className="flex flex-row gap-4 justify-end">
+              <button className="w-auto bg-white text-[#E06929] border border-[#E06929] px-3 md:px-6 py-2 rounded-full hover:bg-[#E06929] hover:text-white transition-colors text-center text-md md:text-lg">
                 Continue Scanning
               </button>
-              <button className="w-full sm:w-auto bg-[#E06929] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity text-center text-lg">
+              <button className="w-auto bg-[#E06929] text-white px-3 md:px-6 py-2 rounded-full hover:opacity-90 transition-opacity text-center text-md md:text-lg">
                 Seek Help
               </button>
             </div>
