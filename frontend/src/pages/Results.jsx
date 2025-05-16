@@ -66,7 +66,7 @@ export const Results = ({
   return (
     <div className="min-h-screen pb-20 font-gantari bold bg-transparent text-main-brown">
       {/* Main Container */}
-      <div className="w-full max-w-7xl mx-auto px-4 pt-20 md:pt-40">
+      <div className="w-[80%] md:w-full max-w-7xl mx-auto px-4 pt-28 md:pt-40">
         {/* Header */}
         <h1 className="fontbold text-4xl md:text-5xl mb-8">Scan Results</h1>
 
@@ -75,11 +75,11 @@ export const Results = ({
           {/* Left Column - Image Section */}
           <div className="w-full md:w-[40%] mb-8 md:mb-0 flex flex-col">
             {/* Filename - Shows first on mobile, last on desktop */}
-            <p className="mb-4 md:mb-0 md:mt-4 order-first md:order-last font-bold text-base">
+            <p className="mb-0.5 md:mb-0 md:mt-4 order-first md:order-last font-bold text-base">
               {imageName}
             </p>
             {/* Image - Shows second on mobile, first on desktop */}
-            <div className="w-full aspect-[4/3] order-last md:order-first">
+            <div className="w-full aspect-[4/3] order-last mb-2 md:order-first">
               <img
                 src={imagePath}
                 alt="Scanned skin area"
@@ -91,8 +91,8 @@ export const Results = ({
           {/* Right Column - Info Section */}
           <div className="w-full md:w-[60%] md: -mt-8">
             {/* Statistics Section */}
-            <div className="mb-4">
-              <h2 className="text-results-header-2 mb-6">Statistics</h2>
+            <div className="mb-2 md:mb-4">
+              <h2 className="text-results-header-3 md:text-results-header-2 test mb-2 md:mb-6 text-center md:text-left">Statistics</h2>
               <div className="flex justify-center md:justify-start gap-16">
                 <div className="text-center">
                   <div
@@ -108,14 +108,14 @@ export const Results = ({
                   <div className="text-5xl md:text-6xl font-black text-[#E06929]">
                     {modelAccuracy}%
                   </div>
-                  <div className="text-lg md:text-xl">Model Accuracy</div>
+                  <div className="whitespace-nowrap text-lg md:text-xl">Model Accuracy</div>
                 </div>
               </div>
             </div>
 
             {/* Next Steps Section */}
             <div className="mb-2">
-              <h2 className="text-results-header-2 mb-6">Next Steps</h2>
+              <h2 className="text-results-header-3 md:text-results-header-2 text-center md:text-left mb-2 md:mb-6">Next Steps</h2>
               <div className="border border-[#B59988] bg-transparent rounded-lg p-6">
                 <p className="text-base md:text-lg">{message.text}</p>
               </div>
