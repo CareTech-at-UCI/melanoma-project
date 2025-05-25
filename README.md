@@ -1,5 +1,5 @@
 # ⚒️Work in Progress!!
-🟡 The Tech Committee is currently working on finishing web dev and improving the model
+🟡 The Tech Committee is finalizing model improvements
 
 # Melanoma Detection Project
 **A clear disclaimer:** this tool is not a replacement for professional medical diagnosis, but a first step in awareness.
