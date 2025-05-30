@@ -26,6 +26,11 @@ module.exports = {
         'scan-header-8': ['12px', { letterSpacing: '-0.03em', fontWeight: '400' }],
         'scan-header-9': ['32px', { letterSpacing: '-0.03em', fontWeight: '400' }],
 
+        'results-header-1': ['40px', { letterSpacing: '-0.03em', fontWeight: '500' }],
+        'results-header-2': ['32px', { letterSpacing: '-0.03em', fontWeight: '500' }],
+        'results-header-3': ['24px', { letterSpacing: '-0.03em', fontWeight: '500' }],
+
+
         "body": ["24px", { fontWeight: "300" }],
         "body-2": ["20px", { fontWeight: "400" }],
         "body-3": ["16px", { fontWeight: "300" }],
