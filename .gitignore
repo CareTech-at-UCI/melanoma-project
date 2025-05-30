@@ -1,6 +1,10 @@
 /isic_2019
 /preprocessed_images
+/filtered_images
 /testing_preprocessed_images
 /old_preprocessed_images
 /augmented_images
+/ISIC_2019_Training_Input
+/ISIC_2020_Training_Input
 *.csv
+*.jpg
