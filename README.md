@@ -7,11 +7,14 @@ This project was built as part of CareTech to teach students how to build a mach
 Users will be able to upload a picture of a mole into our web application and have our 
 machine learning model predict the chance of the mole being melanoma.
 
-# How does it work?
-Once you go to the homepage, find the **'Scan me'** button. After clicking on it, upload an image of a skin lesion and press submit! 
-That photo will go through our machine learning model and then lead you to the results page.
+## How does it work?
+1. Visit the homepage of our web application.
+2. Click on the **“Scan Me”** button or the **Scan** tab in the navbar.
+3. Upload an image of a skin lesion or mole.
+4. Press Submit.
+5. Our custom trained machine learning model will process the image and display the prediction on a results page.
 
-# Tech Stack
+## Tech Stack
 Frontend: React.js + TailwindCSS
 Backend: FastAPI
 Machine Learning: TensorFlow (Custom CNN model)
