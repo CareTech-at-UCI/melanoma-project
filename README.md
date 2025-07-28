@@ -16,9 +16,13 @@ machine learning model predict the chance of the mole being melanoma.
 
 ## Tech Stack
 Frontend: React.js + TailwindCSS
+
 Backend: FastAPI
+
 Machine Learning: TensorFlow (Custom CNN model)
+
 Datasets: ISIC-2019 
+
 Image Preprocessing and Preparation: NumPy, Pandas, OpenCV, scikit-image
 
 
