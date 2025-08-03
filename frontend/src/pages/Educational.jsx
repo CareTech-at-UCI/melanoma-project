@@ -6,12 +6,11 @@ export const Educational = () => {
   return (
     <div className="font-gantari text-main-brown bg-[rgba(240,239,237,1)]">
       {/* Learn About Melanoma */}
-      <div
-        style={{ backgroundImage: "url('/educational/gradient-bg.png')" }}
-        className="bg-cover bg-center border-b border-[rgba(81,33,13,1)]"
-      >
-        <div className="mx-auto text-center pt-24">
-          <h1 className="text-[40px] font-medium">Learn About Melanoma</h1>
+      <div style={{ backgroundImage: "url('/educational/gradient-bg.png')" }} className="bg-cover bg-center border-b border-[rgba(81,33,13,1)]">
+        <div className="mx-auto text-center pt-36">
+          <h1 className="text-[40px] font-medium">
+            Learn About Melanoma
+          </h1>
           <img
             src="/educational/curlyLine.png"
             alt="A person examining a mole on their back"

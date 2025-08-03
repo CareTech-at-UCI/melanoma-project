@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="w-full mx-auto px-0 md:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-0 md:px-6 lg:px-8">
         <div className="bar-header flex justify-between items-center">
           {/* Logo with Two Lines on Mobile */}
           <a1 href="/" className="logo">
@@ -50,21 +50,21 @@ export const Navbar = () => {
             <a href="/" className="text-main-brown">
               Credits
             </a>
-            <a href="/" className="text-main-brown">
+            <a href="/educational" className="text-main-brown">
               Education
             </a>
           </div>
 
           {/* Desktop Scan Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="/" className="scan-button">
+            <a href="/scan" className="scan-button">
               Scan
             </a>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden ${isOpen ? "block" : "hidden"} mobile-menu`}>
+        <div className={`md:hidden ${isOpen ? "open" : ""} mobile-menu`}>
           <div className="mobile-nav flex flex-col">
             <a href="/" className="mobile-menu-item">
               Home
@@ -75,10 +75,10 @@ export const Navbar = () => {
             <a href="/" className="mobile-menu-item">
               Credits
             </a>
-            <a href="/" className="mobile-menu-item">
+            <a href="/educational" className="mobile-menu-item">
               Education
             </a>
-            <a href="/" className="scan-button mobile-scan-button">
+            <a href="/scan" className="scan-button mobile-scan-button">
               Scan
             </a>
           </div>
