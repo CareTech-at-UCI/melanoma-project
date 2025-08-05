@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
+import { useNavigate } from 'react-router-dom';
+import { predictImage } from '../../api.ts'; 
 import fileSvg from '../../images/file.svg';
 import remove from '../../images/remove.svg';
+
+
 export default function Upload() {
   const [uploadedFile, setUploadedFile] = useState(null);
   const [fileError, setFileError] = useState(null);
+  const navigate = useNavigate();
+
   const removeFile = () => {
     setUploadedFile(null);
     setFileError(null);
@@ -25,6 +31,30 @@ export default function Upload() {
     multiple: false,
     noClick: true,
   });
+
+  const handleSubmit = async () => {
+    console.log("handleSubmit ran");
+    if (!uploadedFile) return;
+    console.log("uploadedFile is true");
+    try {
+      console.log("here 1")
+      const imageURL = URL.createObjectURL(uploadedFile);
+      const result = await predictImage(uploadedFile);
+      navigate('/results', {
+        state: {
+          imagePath: imageURL,
+          imageName: uploadedFile.name,
+          confidence: result.confidence,
+        },
+      });
+      
+      // navigate(`/results?prediction=${result.prediction}&confidence=${result.confidence}`);
+      console.log("Prediction result: ", result.prediction);
+    } catch (error) {
+      console.log("here 1")
+      setFileError('Prediction failed. Try again.');
+    }
+  };
 
   return (
     <div className="mb-3 bg-[#F5F5F5] border-2 border-solid border-[#B59988] rounded-xl  mx-auto w-[60%] h-[60%] md:w-[60%] md:h-[55vh]">
@@ -71,6 +101,7 @@ export default function Upload() {
         )}
         <button
           type="button"
+          onClick={handleSubmit}
           className={`rounded-[15px] w-fit px-3 py-[2px] self-end left-0 mr-[5%] mt-4 my-2 md:mt-10 ${
             (!fileError && uploadedFile) ? 'bg-[#E06929] text-[#F0EFED]' : 'bg-[#B9B9B9] text-[#DFDFDF]'
           }`}

@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import defaultImage from "../images/img_348.png";
 
-export const Results = ({
-  imagePath = defaultImage,
-  imageName = "img_348.png",
-  result = 40,
-}) => {
+export const Results = () => {
   // Example confidence values
-  const confidence = result;
+  // const confidence = result;
+  // const modelAccuracy = 85;
+  // const [showConfidenceInfo, setShowConfidenceInfo] = useState(false);
+
+  const location = useLocation();
+  const { imagePath, imageName, confidence } = location.state || {};
+
   const modelAccuracy = 85;
   const [showConfidenceInfo, setShowConfidenceInfo] = useState(false);
 
