@@ -9,6 +9,8 @@ model_training/best_model.h5
 *.csv.DS_Store
 preprocessed_dataset/
 model_training/best_model.h5
+backend/data/
+
 # Python-generated files
 __pycache__/
 *.py[oc]
