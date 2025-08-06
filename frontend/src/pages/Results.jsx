@@ -1,32 +1,26 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import defaultImage from "../images/img_348.png";
 
 export const Results = () => {
-  // Example confidence values
-  // const confidence = result;
-  // const modelAccuracy = 85;
-  // const [showConfidenceInfo, setShowConfidenceInfo] = useState(false);
-
   const location = useLocation();
   const { imagePath, imageName, confidence } = location.state || {};
 
   const modelAccuracy = 85;
   const [showConfidenceInfo, setShowConfidenceInfo] = useState(false);
 
-  const getConfidenceColor = (value) => {
-    if (value >= 75) return "text-[#E83A34]";
-    if (value >= 40) return "text-[#EDA200]";
+  const getConfidenceColor = (confidence) => {
+    if (confidence >= 75) return "text-[#E83A34]";
+    if (confidence >= 40) return "text-[#EDA200]";
     return "text-[#80B700]";
   };
 
-  const getConfidenceMessage = (value) => {
-    if (value >= 75) {
+  const getConfidenceMessage = (confidence) => {
+    if (confidence >= 75) {
       return {
         text: (
           <>
             Based on our analytics, we are{" "}
-            <span className="font-bold">{value}% confident</span> that{" "}
+            <span className="font-bold">{(confidence * 100).toFixed(2)}% confident</span> that{" "}
             <span className="font-bold">melanoma may have been identified</span>{" "}
             from the provided image. We suggest that the person in the image
             seeks{" "}
@@ -36,12 +30,12 @@ export const Results = () => {
         ),
       };
     }
-    if (value >= 40) {
+    if (confidence >= 40) {
       return {
         text: (
           <>
             Based on our analytics, we are{" "}
-            <span className="font-bold">{value}% confident</span> that melanoma has
+            <span className="font-bold">{(confidence * 100).toFixed(2)}% confident</span> that melanoma has
             been identified from the provided image. Therefore, there is a
             <span className="font-bold">possible chance</span> that the image
             provided may contain melanoma. Please scan again and follow up with{" "}
@@ -55,9 +49,9 @@ export const Results = () => {
       text: (
         <>
           Based on our analytics, we are{" "}
-          <span className="font-bold">5% confident</span> that melanoma has been
-          identified from the provided image. Therefore, there is a high chance
-          that the image <span className="font-bold">does not contain</span>{" "}
+          <span className="font-bold">{(confidence * 100).toFixed(2)}% confident</span> that melanoma has been
+          identified from the provided image. Therefore, there is a <span className="font-bold">low chance</span>{" "}
+          that the image contains{" "}
           melanoma.
         </>
       ),
@@ -103,7 +97,7 @@ export const Results = () => {
                       confidence
                     )}`}
                   >
-                    {confidence}%
+                    {(confidence * 100).toFixed(2)}%
                   </div>
                   <div className="text-lg md:text-xl">Confidence</div>
                 </div>
