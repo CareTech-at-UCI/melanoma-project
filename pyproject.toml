@@ -4,7 +4,13 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "ipywidgets>=8.1.7",
+    "jupyter>=1.1.1",
+    "pandas-profiling>=3.6.6",
+    "tqdm>=4.67.1",
+    "widgetsnbextension>=4.0.14",
+]
 
 [dependency-groups]
 dev = [
