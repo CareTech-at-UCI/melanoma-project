@@ -21,6 +21,7 @@ wheels/
 
 # Virtual environments
 .venv
+venv
 
 ISIC_2019_Training_Input/*
 ISIC_2019_Test_Input/*

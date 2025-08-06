@@ -40,16 +40,16 @@ export const Navbar = () => {
           </button>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex justify-center items-center space-x-8">
+          <div className="hidden md:flex justify-center items-center space-x-12">
             <a href="/" className="text-main-brown">
               Home
             </a>
-            <a href="/" className="text-main-brown">
+            {/* <a href="/" className="text-main-brown">
               Doctors & Clinics
-            </a>
-            <a href="/" className="text-main-brown">
+            </a> */}
+            {/* <a href="/" className="text-main-brown">
               Credits
-            </a>
+            </a> */}
             <a href="/educational" className="text-main-brown">
               Education
             </a>
@@ -69,12 +69,12 @@ export const Navbar = () => {
             <a href="/" className="mobile-menu-item">
               Home
             </a>
-            <a href="/" className="mobile-menu-item">
+            {/* <a href="/" className="mobile-menu-item">
               Doctors & Clinics
-            </a>
-            <a href="/" className="mobile-menu-item">
+            </a> */}
+            {/* <a href="/" className="mobile-menu-item">
               Credits
-            </a>
+            </a> */}
             <a href="/educational" className="mobile-menu-item">
               Education
             </a>

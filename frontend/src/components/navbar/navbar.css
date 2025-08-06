@@ -2,6 +2,8 @@
   .navbar {
     position: fixed;
     width: 100%;
+    position: fixed;
+    width: 100%;
     background-color: #f0efed; 
     transition: background-color 0.3s ease;
     align-items: center;
@@ -14,6 +16,8 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .navbar {
+    position: fixed;
+    width: 100%;
     position: fixed;
     width: 100%;
     background-color: #f0efed; /* TODO: Choose to make transparent or the high-fi color*/
@@ -36,12 +40,15 @@
   .navbar {
     position: fixed;
     width: 100%;
+    position: fixed;
+    width: 100%;
     background-color: #f0efed;
     padding-top: 4%;
     padding-bottom: 2%;
   }
 
   .navbar .bar-header {
+    width: 100%;
     width: 100%;
     background-color: #f0efed;
     padding-right: 8%;
@@ -85,6 +92,7 @@
     color: #4e3629;
     padding: 3.5% 0;
     justify-content: center;
+    justify-items: center;
     border-bottom: 1px solid #f0efed;
   }
 
