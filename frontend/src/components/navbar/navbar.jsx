@@ -51,7 +51,7 @@ export const Navbar = () => {
               Credits
             </a> */}
             <a href="/educational" className="text-main-brown">
-              Education
+              Education & Resources
             </a>
           </div>
 
