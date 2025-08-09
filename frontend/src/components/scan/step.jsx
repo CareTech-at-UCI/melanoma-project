@@ -7,7 +7,7 @@ const StepCard = ({title, description, icon: Icon }) => {
             w-full
             md:w-[350px]
             rounded-[8px] 
-            p-[1.5%] 
+            p-[1.2%] 
             shadow-[0px_8px_8px_0px_rgba(0,0,0,0.15)]
             flex 
             flex-col
@@ -20,7 +20,7 @@ const StepCard = ({title, description, icon: Icon }) => {
                     <Icon/>
                 </div>
                 {/*step-text*/}
-                <div className="lg:w-[300px] w-[80%] h-[50%] flex flex-col gap-[8px] md:gap-[16px]">
+                <div className="lg:w-[300px] w-[80%] h-[50%] flex flex-col gap-[8px] md:gap-[10px]">
                     <h1 className="font-gantari text-main-brown text-scan-header-7 lg:text-scan-header-5 md:text-scan-header-5">
                         {title}
                     </h1>
