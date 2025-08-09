@@ -29,12 +29,12 @@ export const Hero = () => {
   return (
     <section className="text-main-brown min-h-screen flex flex-col">
       {/* Main Content Area - centered */}
-      <div className="flex-grow flex items-center justify-center p-8 lg:p-10">
+      <div className="flex-grow flex items-center justify-center px-5 lg:py-0 lg:px-14">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
           {/* Text Content */}
           <div className="w-full md:w-1/2 text-left mt-20">
             <h1 className="mb-8 text-4xl lg:text-header-1 md:text-header-1 lg:font-bold md:font-bold sm:font-bold"> {/* Have to add repeated font-bold because of other font overriding */}
-              Application utility and purpose in a sentence.
+              Scanning made simple.
             </h1>
             <p className="text-body text-xl mb-6">
               Explain the purpose, utility, and function of the application in a
