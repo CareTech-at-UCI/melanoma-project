@@ -39,23 +39,6 @@ export const HowProjectBuilt = () => {
             </div>
           ))}
         </div>
-
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-[#C24A00] lg:pt-10">
-          {/* ! LINK TO RIGHT THING */}
-          <Link
-            to="/team"
-            className="text-main-orange text-2xl font-medium hover:underline"
-          >
-            View Team &gt;
-          </Link>
-          {/* ! LINK TO RIGHT THING */}
-          <Link
-            to="/credits"
-            className="text-main-orange text-2xl font-medium hover:underline"
-          >
-            Project Credits &gt;
-          </Link>
-        </div>
       </div>
     </section>
   );

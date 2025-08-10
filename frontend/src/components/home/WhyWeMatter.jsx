@@ -15,9 +15,9 @@ export const WhyWeMatter = () => {
             additional information related to it. This will be as long or as
             short as you need it.
           </p>
-          <button className="text-orange-500 text-lg md:text-body-3 font-bold bg-white border border-main-orange py-2 md:py-1 px-4 md:px-6 rounded-full hover:bg-orange-500 hover:text-white transition-colors">
+          {/* <button className="text-orange-500 text-lg md:text-body-3 font-bold bg-white border border-main-orange py-2 md:py-1 px-4 md:px-6 rounded-full hover:bg-orange-500 hover:text-white transition-colors">
             Professional Assistance &gt;
-          </button>
+          </button> */}
         </div>
       </div>
       {/* Image */}
