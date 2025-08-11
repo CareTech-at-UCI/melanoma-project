@@ -1,6 +1,7 @@
 import React from "react";
 import { AbcdeCard } from "../components/educational/AbcdeCard";
 import { ResourceCard } from "../components/educational/ResourceCard";
+import "../components/educational/styles.css"
 
 export const Educational = () => {
   return (
@@ -189,10 +190,10 @@ export const Educational = () => {
             className="h-[194px] w-[292px] rounded-[4px] border border-[#B59988] hidden lg:inline-block"
           />
         </div>
-        <div className="flex justify-center items-center md:py-6">
-          <button className="text-white text-lg lg:text-header-4 md:text-3xl font-bold bg-orange-500 py-2 lg:py-1 md:py-3 px-4 lg:px-6 md:px-8 rounded-full hover:opacity-90 transition-opacity">
+        <div className="hidden md:flex items-center justify-center space-x-4">
+          <a href="/scan" className="scan-button">
             Start Scanning
-          </button>
+          </a>
         </div>
       </div>
     </div>

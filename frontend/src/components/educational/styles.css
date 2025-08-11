@@ -1,0 +1,21 @@
+.scan-button {
+  background-color: #c24a00;
+  color: #ffffff;
+  height: 35px;
+  border-radius: 50px;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: "Gantari", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.scan-button:hover {
+  background-color: #a74000;
+  color: #f0efed;
+}
