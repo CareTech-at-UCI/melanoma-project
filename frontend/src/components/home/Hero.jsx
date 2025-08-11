@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css";
 
 const ArrowDownIcon = ({ className }) => (
   <svg
@@ -45,10 +46,10 @@ export const Hero = () => {
               Disclaimer: This is not a replacement for receiving professional
               treatment. Redirect with hyperlink to Doctors & Clinic resources.
             </p>
-            <div className="flex justify-center md:justify-start">
-              <button className="text-white text-2xl lg:text-header-4 md:text-3xl font-bold bg-orange-500 py-2 lg:py-1 md:py-3 px-4 lg:px-6 md:px-8 rounded-full hover:opacity-90 transition-opacity">
+            <div className="hidden md:flex items-center space-x-4">
+              <a href="/scan" className="scan-button">
                 Start Scanning
-              </button>
+              </a>
             </div>
           </div>
           {/* Image */}
