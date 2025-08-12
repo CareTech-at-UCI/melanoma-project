@@ -27,10 +27,10 @@ export const Educational = () => {
             <p className="text-xl font- leading-relaxed">
               Melanoma is a type of skin cancer that develops when melanocytes,
               cells that give skin its tan or brown color, begin growing
-              uncontrollably. Though less common compared to other types of skin
-              cancers, melanoma is significantly more dangerous because of its
+              uncontrollably. Melanoma is significantly more dangerous because of its
               high likelihood to spread to other parts of the body if not found
-              and treated early on (American Cancer Society).
+              and treated early on (American Cancer Society). Keeping an eye on changes 
+              in your skin and checking unusual spots early can make a big difference in protecting your health.
             </p>
           </div>
           <div className="mt-8 md:mt-0 md:ml-12">
@@ -136,25 +136,25 @@ export const Educational = () => {
             imageSrc="/educational/melanoma_types.png"
             title="Types of Melanoma"
             description="There are 7 types of melanoma, with 3 of them being rare variants. The 4 main types are superficial spreading, nodular, lentigo maligna and acral lentiginous."
-            additionalInfo="/"
+            additionalInfo="https://cancer.ca/en/cancer-information/cancer-types/melanoma-skin/what-is-melanoma/types-of-melanoma"
           />
           <ResourceCard
-            imageSrc="/educational/melanoma_types.png"
-            title="Types of Melanoma"
-            description="There are 7 types of melanoma, with 3 of them being rare variants. The 4 main types are superficial spreading, nodular, lentigo maligna and acral lentiginous."
-            additionalInfo="/"
+            imageSrc="/educational/melanoma_dark_skin.jpg"
+            title="Melanoma Skin Cancer on Darker Skin Tones"
+            description="Melanoma is often diagnosed in the late stage on darker skin tones. Learn how to identify melanoma on darker skin."
+            additionalInfo="https://www.mskcc.org/cancer-care/types/melanoma/melanoma-skin-cancer-dark-black-skin"
           />
           <ResourceCard
-            imageSrc="/educational/melanoma_types.png"
-            title="Types of Melanoma"
-            description="There are 7 types of melanoma, with 3 of them being rare variants. The 4 main types are superficial spreading, nodular, lentigo maligna and acral lentiginous."
-            additionalInfo="/"
+            imageSrc="/educational/american_cancer_soc.jpg"
+            title="Signs and Symptoms of Melanoma Skin Cancer"
+            description="Seeing unusual lesions or discoloring of your skin may indicate a warning of skin cancer, skin cancer itself, or potentially melanoma."
+            additionalInfo="https://www.cancer.org/cancer/types/melanoma-skin-cancer/detection-diagnosis-staging/signs-and-symptoms.html"
           />
           <ResourceCard
-            imageSrc="/educational/melanoma_types.png"
-            title="Types of Melanoma"
-            description="There are 7 types of melanoma, with 3 of them being rare variants. The 4 main types are superficial spreading, nodular, lentigo maligna and acral lentiginous."
-            additionalInfo="/"
+            imageSrc="/educational/treatment_doctor.jpeg"
+            title="Treatment of Melanoma"
+            description="Treatment of melanoma is dependent on factors such as location, general health, and whether or not it has spread."
+            additionalInfo="https://www.nhs.uk/conditions/melanoma-skin-cancer/treatment/"
           />
         </div>
         <div className="absolute bottom-0 left-0 w-full">
