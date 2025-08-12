@@ -34,17 +34,16 @@ export const Hero = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
           {/* Text Content */}
           <div className="w-full md:w-1/2 text-left mt-20">
-            <h1 className="mb-8 text-4xl lg:text-header-1 md:text-header-1 lg:font-bold md:font-bold sm:font-bold"> {/* Have to add repeated font-bold because of other font overriding */}
-              Scanning made simple.
+            <h1 className="mb-8 text-header-1 font-bold"> {/* Have to add repeated font-bold because of other font overriding */}
+              Early detection made simple.
             </h1>
             <p className="text-body text-xl mb-6">
-              Explain the purpose, utility, and function of the application in a
-              single sentence in greater detail for the user to understand and
-              follow.
+              Upload a clear photo of a skin lesion, and our AI-powered model will provide an estimate of the likelihood of melanoma, 
+              helping you take the next step toward timely care.
             </p>
             <p className="lg:text-body-3 md:text-lg mb-8">
-              Disclaimer: This is not a replacement for receiving professional
-              treatment. Redirect with hyperlink to Doctors & Clinic resources.
+              Disclaimer: This tool is for educational purposes only. 
+              It is not a substitute for professional medical advice, diagnosis, or treatment.
             </p>
             <div className="hidden md:flex items-center space-x-4">
               <a href="/scan" className="scan-button">
