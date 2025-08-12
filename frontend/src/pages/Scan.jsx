@@ -13,7 +13,7 @@ export const Scan = () => {
     </div>
     <div className="w-full h-full flex flex-col items-center overflow-hidden">
         {/*Frame 44*/}
-        <div className="pt-10 w-full flex flex-col items-center justify-center">
+        <div className="pt-10 w-full md:w-[90%] flex flex-col items-center justify-center">
             {/*Frame 135*/}
             <div className="text-left w-full pl-2 md:pl-15">
                 <h1 className="font-gantari text-main-brown text-scan-header-9 md:text-header-2 sm:pl-3">
