@@ -6,7 +6,8 @@
 .scan-button {
   background-color: #c24a00;
   color: #ffffff;
-  height: 35px;
+  width: 180px;
+  height: 40px;
   border-radius: 50px;
   padding: 8px 10px;
   display: flex;
