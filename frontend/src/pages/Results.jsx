@@ -137,16 +137,6 @@ export const Results = () => {
                 </div>
               )}
             </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-row gap-4 justify-end">
-              <button className="w-auto bg-white text-[#E06929] border border-[#E06929] px-3 md:px-6 py-2 rounded-full hover:bg-[#E06929] hover:text-white transition-colors text-center text-md md:text-lg">
-                Continue Scanning
-              </button>
-              <button className="w-auto bg-[#E06929] text-white px-3 md:px-6 py-2 rounded-full hover:opacity-90 transition-opacity text-center text-md md:text-lg">
-                Seek Help
-              </button>
-            </div>
           </div>
         </div>
       </div>

@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState} from 'react'
 
 export const AbcdeCard = ({ letter, imageSrc, title, description }) => {
+  const [isBlurred, setIsBlurred] = useState(true);
+
+  const toggleBlur = () => setIsBlurred((prev) => !prev);
+
   return (
     <div className="relative w-[221px] flex flex-col gap-4">
-      <div className="w-[221px] h-[221px] overflow-hidden">
+      <div 
+        className="w-[221px] h-[221px] overflow-hidden cursor-pointer"
+        onClick={toggleBlur}
+      >
         <img
           src={imageSrc}
           alt="mole"
-          className="border border-[rgba(181,153,136,1)] rounded-lg w-full h-full object-cover"
+          className={`border border-[rgba(181,153,136,1)] rounded-lg w-full h-full object-cover transition-all duration-300 ${isBlurred ? 'blur-md' : 'blur-0'}`}
         />
       </div>
       <h2 className="text-2xl font-semibold w-[45px] h-[45px] rounded-full bg-[rgba(240,239,237,1)] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.2)] flex items-center justify-center absolute top-2 left-2">
