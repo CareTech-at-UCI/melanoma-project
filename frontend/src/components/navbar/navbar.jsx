@@ -78,7 +78,7 @@ export const Navbar = () => {
             <a href="/educational" className="mobile-menu-item">
               Education
             </a>
-            <a href="/scan" className="scan-button mobile-scan-button">
+            <a href="/scan" className="scan mobile-menu-item">
               Scan
             </a>
           </div>

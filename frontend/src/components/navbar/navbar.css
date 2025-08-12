@@ -18,6 +18,7 @@
     background-color: transparent; 
     box-shadow: 0 5px 6px -6px rgba(18, 18, 18, 0.2);
     padding-top: 3%;
+    padding-bottom: 2%;
   }
 
   .navbar .logo {
@@ -84,17 +85,21 @@
     justify-items: center;
   }
 
-  .navbar .scan-button,
-  .navbar .mobile-scan-button {
-    display: none !important;
+  .navbar a.scan {
+    display: flex;
     font-size: 20px;
+    font-weight: bold;
+    color: #c24a00;
+    padding: 3.5% 0;
+    justify-content: center;
+    justify-items: center;
   }
 }
 
 /* USE THIS IF BACKGROUND WILL BE SAME COLOR */
-/* .navbar {
-  background-color: #f0efed !important;
-} */
+.navbar {
+  background-color: transparent !important;
+}
 
 .navbar a1 {
   font-family: "Gantari", sans-serif;
