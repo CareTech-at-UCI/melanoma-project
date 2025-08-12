@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export const HowProjectBuilt = () => {
   const technologies = [
@@ -16,9 +15,9 @@ export const HowProjectBuilt = () => {
       <div className="container mx-auto text-center">
         <h2 className="text-header-2 lg:text-header-2 md:text-header-1 mb-4">How the Project was Built</h2>
         <p className="lg:text-body-2 text-body-1 text-base md:text-2xl text-secondary-brown mb-6 max-w-7xl mx-auto">
-          An explanation of how the project was built for its purposes but also
-          for the purpose of teaching students. Include all information about
-          how the project was built.
+          This project was built using the ISIC-2019 dataset and various technologies. First,
+          we prepared the dataset with proper data cleaning and image preprocessing techniques
+          and then trained a convolutional neural network to detect melanoma in images.
         </p>
 
         <div className="flex justify-center items-center flex-wrap mb-6 gap-4 md:gap-8 lg:pt-10">

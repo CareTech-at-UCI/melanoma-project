@@ -76,7 +76,7 @@ export const Navbar = () => {
               Credits
             </a> */}
             <a href="/educational" className="mobile-menu-item">
-              Education
+              Education & Resources
             </a>
             <a href="/scan" className="scan mobile-menu-item">
               Scan

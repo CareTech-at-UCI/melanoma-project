@@ -38,11 +38,12 @@ export const Hero = () => {
               Early detection made simple.
             </h1>
             <p className="text-body text-xl mb-6">
-              Upload a clear photo of a skin lesion, and our AI-powered model will provide an estimate of the likelihood of melanoma, 
+              Upload a <span className="font-bold">clear photo</span> of a skin lesion, and our <span className="font-bold">AI-powered model </span> 
+              will provide an estimate of the likelihood of <span className="font-bold">melanoma</span>, 
               helping you take the next step toward timely care.
             </p>
             <p className="lg:text-body-3 md:text-lg mb-8">
-              Disclaimer: This tool is for educational purposes only. 
+              <span className="font-bold">Disclaimer: </span>This tool is for educational purposes only. 
               It is not a substitute for professional medical advice, diagnosis, or treatment.
             </p>
             <div className="hidden md:flex items-center space-x-4">
