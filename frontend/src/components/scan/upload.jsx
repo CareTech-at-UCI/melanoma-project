@@ -57,7 +57,7 @@ export default function Upload() {
   };
 
   return (
-    <div className="mb-32 pb-[.8%] bg-[#F5F5F5] border-2 border-solid border-[#B59988] rounded-xl mx-auto w-[60%] h-[60%] md:w-[60%] md:h-[35vh]">
+    <div className="mb-32 mt-12 sm:mt-10 md:mt-0  pb-[.8%] bg-[#F5F5F5] border-2 border-solid border-[#B59988] rounded-xl mx-auto w-[60%] h-[60%] md:w-[50%] xs:w-[80%] md:h-[35vh]">
       <p className='font-gantari text-main-brown pl-[5%] pt-[2%]'>Upload Image</p>
       <div
       className={`border-2 border-dashed border-[#51210D] rounded-xl mx-auto w-[90%] h-[60%] p-4 flex items-center justify-center ${
