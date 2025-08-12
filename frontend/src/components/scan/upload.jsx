@@ -87,23 +87,34 @@ export default function Upload() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-row justify-between">
         {!uploadedFile && fileError && (
           <p className='w-fit text-left ml-[5%] mt-1 px-2 py-1 bg-[#FFC8C0] text-[#FF0F0F] rounded max-w-[90%]'>
             Upload Failed: Maximum file size of 15 MB reached
           </p>
         )}
-        {!fileError && uploadedFile && (
-          <div className='w-fit bg-[#B59988] text-[#51210D] text-left ml-[5%] px-2 py-1 mt-1 rounded flex flex-row'>
-            <img src={remove} alt="remove" />
-            <button onClick={removeFile}>{uploadedFile.name}</button>
+
+        {/* File name in bottom left*/}
+        {!fileError && uploadedFile ? (
+          <div className='bg-[#B59988] text-[#51210D] w-fit items-center text-left ml-[5%] space-x-2 px-1 py-1 mt-[2%] rounded flex flex-row'>
+            <button
+              onClick={removeFile}
+              className="flex items-center justify-center"
+              title="Remove file"
+            >
+              <img src={remove} alt="remove" className="cursor-pointer" />
+            </button>
+
+            <span>{uploadedFile.name}</span>
           </div>
+        ) : (
+          <div className="w-[200px] h-[32px]"></div> // placeholder keeps layout and submit button to the bottom right
         )}
         <button
           type="button"
           onClick={handleSubmit}
-          className={`rounded-[15px] w-fit px-3 py-[2px] self-end left-0 mr-[5%] mt-4 my-2 md:mt-10 ${
-            (!fileError && uploadedFile) ? 'bg-[#E06929] text-[#F0EFED]' : 'bg-[#B9B9B9] text-[#DFDFDF]'
+          className={`rounded-[15px] w-fit px-3 py-[2px] self-end left-0 mr-[5%] md:mt-5 ${
+            (!fileError && uploadedFile) ? 'bg-[#E06929] text-[#F0EFED]' : 'bg-[#B9B9B9] text-[#3d2c2c]'
           }`}
         >
           Submit
