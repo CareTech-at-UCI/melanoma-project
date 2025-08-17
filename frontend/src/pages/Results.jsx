@@ -121,8 +121,10 @@ export const Results = () => {
             {/* Confidence Level Info */}
             <div className="mb-4 relative">
               <button
-                onClick={() => setShowConfidenceInfo(!showConfidenceInfo)}
+                onMouseEnter={() => setShowConfidenceInfo(true)}
+                onMouseLeave={() => setShowConfidenceInfo(false)}
                 className="flex items-center text-sm hover:opacity-80"
+                type="button"
               >
                 <span className="mr-2">ⓘ</span>
                 What is confidence level?
