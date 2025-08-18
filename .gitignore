@@ -23,6 +23,10 @@ wheels/
 .venv
 venv
 
+# .env
+.env
+
+# Datsets
 ISIC_2019_Training_Input/*
 ISIC_2019_Test_Input/*
 working/
