@@ -3,4 +3,4 @@ uvicorn[standard]
 huggingface_hub
 pillow
 numpy
-tensorflow
+tensorflow-cpu
