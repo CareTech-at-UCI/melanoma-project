@@ -8,6 +8,8 @@ from contextlib import asynccontextmanager
 import os
 import tensorflow as tf
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global MODEL
