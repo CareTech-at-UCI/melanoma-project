@@ -4,3 +4,4 @@ huggingface_hub
 pillow
 numpy
 tensorflow-cpu
+opencv-python-headless
