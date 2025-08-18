@@ -29,7 +29,7 @@ app = FastAPI(lifespan=lifespan)
 # Allow frontend to call backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://melanoma-detector.vercel.app"], 
+    allow_origins=["http://localhost:3000", "https://melanoma-detector.vercel.app", "https://melanoma-project.onrender.com" ], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
