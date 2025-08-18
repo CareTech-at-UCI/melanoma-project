@@ -4,7 +4,7 @@ from dotenv import load_dotenv; load_dotenv()
 from model import predict_image
 from utils import preprocess_image
 from huggingface_hub import hf_hub_download
-import tflite_runtime.interpreter as tflite
+import tensorflow as tf
 from contextlib import asynccontextmanager
 import os
 import tensorflow as tf
@@ -49,7 +49,7 @@ def load_model_from_hub():
         token=os.getenv("HF_TOKEN") 
     )
 
-    interpreter = tflite.Interpreter(model_path=local_path)
+    interpreter = tf.lite.Interpreter(model_path=local_path)
     interpreter.allocate_tensors()
 
     input_index = interpreter.get_input_details()[0]["index"]
