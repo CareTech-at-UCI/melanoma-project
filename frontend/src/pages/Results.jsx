@@ -6,22 +6,22 @@ export const Results = () => {
   const { imagePath, imageName, confidence } = location.state || {};
   const wholeNumberConfidence = (confidence * 100).toFixed(2)
 
-  const modelAccuracy = 75;
+  const constModelAccuracy = 75;
   const [showConfidenceInfo, setShowConfidenceInfo] = useState(false);
 
-  const getConfidenceColor = (confidence) => {
-    if (confidence >= 75) return "text-[#E83A34]";
-    if (confidence >= 40) return "text-[#EDA200]";
+  const getConfidenceColor = (conf) => {
+    if (conf >= 75) return "text-[#E83A34]";
+    if (conf >= 40) return "text-[#EDA200]";
     return "text-[#80B700]";
   };
 
-  const getConfidenceMessage = (confidence) => {
-    if (confidence >= 75) {
+  const getConfidenceMessage = (conf) => {
+    if (conf >= 75) {
       return {
         text: (
           <>
             Based on our analytics, we are{" "}
-            <span className="font-bold">{confidence}% confident</span> that{" "}
+            <span className="font-bold">{conf}% confident</span> that{" "}
             <span className="font-bold">melanoma may have been identified</span>{" "}
             from the provided image. We suggest that the person in the image
             seeks{" "}
@@ -36,7 +36,7 @@ export const Results = () => {
         text: (
           <>
             Based on our analytics, we are{" "}
-            <span className="font-bold">{confidence}% confident</span> that melanoma has
+            <span className="font-bold">{conf}% confident</span> that melanoma has
             been identified from the provided image. Therefore, there is a
             <span className="font-bold">possible chance</span> that the image
             provided may contain melanoma. Please scan again and follow up with{" "}
@@ -50,7 +50,7 @@ export const Results = () => {
       text: (
         <>
           Based on our analytics, we are{" "}
-          <span className="font-bold">{confidence}% confident</span> that melanoma has been
+          <span className="font-bold">{conf}% confident</span> that melanoma has been
           identified from the provided image. Therefore, there is a <span className="font-bold">low chance</span>{" "}
           that the image contains{" "}
           melanoma.
@@ -104,7 +104,7 @@ export const Results = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-5xl md:text-6xl font-black text-[#E06929]">
-                    {modelAccuracy}%
+                    {constModelAccuracy}%
                   </div>
                   <div className="whitespace-nowrap text-lg md:text-xl">Model Accuracy</div>
                 </div>
