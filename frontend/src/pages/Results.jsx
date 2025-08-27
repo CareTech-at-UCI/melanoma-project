@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 export const Results = () => {
   const location = useLocation();
   const { imagePath, imageName, confidence } = location.state || {};
-  const wholeNumberConfidence = (confidence * 100).toFixed(2)
+  const wholeNumberConfidence = (confidence * 100).toFixed(2);
 
   const constModelAccuracy = 75;
   const [showConfidenceInfo, setShowConfidenceInfo] = useState(false);
@@ -31,14 +31,14 @@ export const Results = () => {
         ),
       };
     }
-    if (confidence >= 40) {
+    if (conf >= 40) {
       return {
         text: (
           <>
             Based on our analytics, we are{" "}
             <span className="font-bold">{conf}% confident</span> that melanoma has
             been identified from the provided image. Therefore, there is a
-            <span className="font-bold">possible chance</span> that the image
+            <span className="font-bold"> possible chance</span> that the image
             provided may contain melanoma. Please scan again and follow up with{" "}
             <span className="font-bold">professional medical</span> attention to
             verify.
@@ -60,6 +60,8 @@ export const Results = () => {
   };
 
   const message = getConfidenceMessage(wholeNumberConfidence);
+  console.log(confidence);
+  console.log(wholeNumberConfidence);
 
   return (
     <div className="min-h-screen pb-20 font-gantari bold text-main-brown bg-off-white">
