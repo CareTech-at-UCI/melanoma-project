@@ -5,17 +5,17 @@ export const Results = () => {
   const location = useLocation();
   const { imagePath, imageName, confidence } = location.state || {};
 
-  const modelAccuracy = 85;
+  const modelAccuracy = 75;
   const [showConfidenceInfo, setShowConfidenceInfo] = useState(false);
 
   const getConfidenceColor = (confidence) => {
-    if (confidence >= 75) return "text-[#E83A34]";
-    if (confidence >= 40) return "text-[#EDA200]";
+    if (confidence >= .75) return "text-[#E83A34]";
+    if (confidence >= .40) return "text-[#EDA200]";
     return "text-[#80B700]";
   };
 
   const getConfidenceMessage = (confidence) => {
-    if (confidence >= 75) {
+    if (confidence >= .75) {
       return {
         text: (
           <>
@@ -30,7 +30,7 @@ export const Results = () => {
         ),
       };
     }
-    if (confidence >= 40) {
+    if (confidence >= .40) {
       return {
         text: (
           <>
