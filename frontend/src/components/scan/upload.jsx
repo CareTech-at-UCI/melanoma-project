@@ -57,6 +57,8 @@ export default function Upload() {
   };
 
   return (
+    <>
+    <p className='flex mb-5 justify-center items-center'>WARNING: If you receive an error, please try compressing your image as we are working with free hosting services</p>
     <div className="mb-32 mt-12 sm:mt-10 md:mt-0  pb-[.8%] bg-[#F5F5F5] border-2 border-solid border-[#B59988] rounded-xl mx-auto w-[60%] h-[60%] md:w-[50%] xs:w-[80%] md:h-[35vh]">
       <p className='font-gantari text-main-brown pl-[5%] pt-[2%]'>Upload Image</p>
       <div
@@ -121,6 +123,7 @@ export default function Upload() {
         </button>
       </div>
     </div>
+    </>
     
   );
 }
