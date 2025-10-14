@@ -30,6 +30,7 @@ async def lifespan(app: FastAPI):
     INTERPRETER, INPUT_INDEX, OUTPUT_INDEX = load_model_from_hub()
     yield
 
+
 # Rate limiter
 limiter = Limiter(key_func=get_remote_address)
 
@@ -74,7 +75,7 @@ def load_model_from_hub():
 
 
 @app.post("/predict/")
-@limiter.limit("50/minute") # 50 requests per minute
+@limiter.limit("50/minute")  # 50 requests per minute
 async def predict(request: Request, file: UploadFile = File(...)):
     # contents = await file.read()
     # preprocessed = preprocess_image(contents)
@@ -84,8 +85,7 @@ async def predict(request: Request, file: UploadFile = File(...)):
 
     if not file.filename.lower().endswith((".jpg", ".jpeg", ".png")):
         raise HTTPException(
-            status_code=400,
-            detail="Only JPG and PNG files are allowed."
+            status_code=400, detail="Only JPG and PNG files are allowed."
         )
 
     contents = await file.read()
