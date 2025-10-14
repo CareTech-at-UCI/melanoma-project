@@ -15,6 +15,9 @@ from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 
+from PIL import Image
+import io
+
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 # Globals
@@ -89,7 +92,26 @@ async def predict(request: Request, file: UploadFile = File(...)):
         )
 
     contents = await file.read()
-    preprocessed = preprocess_image(contents)  # shape (224, 224, 3)
+
+    # Image compression
+    try:
+        image = Image.open(io.BytesIO(contents))
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid image file.")
+    
+    image.thumbnail((1024, 1024))
+    compressed_io = io.BytesIO()
+
+    # Save resized image into memory
+    image.save(compressed_io, format=image.format or "JPEG", quality=70, optimize=True)
+
+    # Rewind in-memory cursor back to start (like a tape)
+    compressed_io.seek(0)
+
+    # Load compressed image's bytes into compressed_bytes
+    compressed_bytes = compressed_io.read()
+
+    preprocessed = preprocess_image(compressed_bytes)  # shape (224, 224, 3)
     preprocessed = preprocessed.astype("float32")
     preprocessed = preprocessed.reshape(1, 224, 224, 3)
 
