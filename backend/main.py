@@ -1,6 +1,8 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv; load_dotenv()
+from dotenv import load_dotenv
+
+load_dotenv()
 from model import predict_image
 from utils import preprocess_image
 from huggingface_hub import hf_hub_download
@@ -8,6 +10,13 @@ import tensorflow as tf
 from contextlib import asynccontextmanager
 import os
 import tensorflow as tf
+
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
+
+from PIL import Image
+import io
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
@@ -17,6 +26,7 @@ INTERPRETER = None
 INPUT_INDEX = None
 OUTPUT_INDEX = None
 
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global INTERPRETER, INPUT_INDEX, OUTPUT_INDEX
@@ -24,29 +34,38 @@ async def lifespan(app: FastAPI):
     yield
 
 
+# Rate limiter
+limiter = Limiter(key_func=get_remote_address)
+
 app = FastAPI(lifespan=lifespan)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # Allow frontend to call backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://melanoma-detector.vercel.app", "https://melanoma-project.onrender.com" ], 
+    allow_origins=[
+        "http://localhost:3000",
+        "https://melanoma-detector.vercel.app",
+        "https://melanoma-project.onrender.com",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+
 @app.get("/")
 def root():
     return {"message": "Melanoma detection API is live!"}
 
+
 def load_model_from_hub():
-    repo_id = os.environ["MODEL_REPO"]           
+    repo_id = os.environ["MODEL_REPO"]
     filename = os.getenv("MODEL_FILENAME", "melanoma_combo_model.keras")
 
     local_path = hf_hub_download(
-        repo_id=repo_id,
-        filename=filename,          
-        token=os.getenv("HF_TOKEN") 
+        repo_id=repo_id, filename=filename, token=os.getenv("HF_TOKEN")
     )
 
     interpreter = tf.lite.Interpreter(model_path=local_path)
@@ -57,16 +76,42 @@ def load_model_from_hub():
 
     return interpreter, input_index, output_index
 
+
 @app.post("/predict/")
-async def predict(file: UploadFile = File(...)):
+@limiter.limit("50/minute")  # 50 requests per minute
+async def predict(request: Request, file: UploadFile = File(...)):
     # contents = await file.read()
     # preprocessed = preprocess_image(contents)
     # confidence = predict_image(preprocessed)
     # label = "Melanoma" if confidence > 0.75 else "Non-Melanoma"
     # return {"prediction": label, "confidence": confidence}
 
+    if not file.filename.lower().endswith((".jpg", ".jpeg", ".png")):
+        raise HTTPException(
+            status_code=400, detail="Only JPG and PNG files are allowed."
+        )
+
     contents = await file.read()
-    preprocessed = preprocess_image(contents)  # shape (224, 224, 3)
+
+    # Image compression
+    try:
+        image = Image.open(io.BytesIO(contents))
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid image file.")
+    
+    image.thumbnail((1024, 1024))
+    compressed_io = io.BytesIO()
+
+    # Save resized image into memory
+    image.save(compressed_io, format=image.format or "JPEG", quality=70, optimize=True)
+
+    # Rewind in-memory cursor back to start (like a tape)
+    compressed_io.seek(0)
+
+    # Load compressed image's bytes into compressed_bytes
+    compressed_bytes = compressed_io.read()
+
+    preprocessed = preprocess_image(compressed_bytes)  # shape (224, 224, 3)
     preprocessed = preprocessed.astype("float32")
     preprocessed = preprocessed.reshape(1, 224, 224, 3)
 
