@@ -10,3 +10,9 @@
     font-size: 11px; /* Smaller font size for mobile screens */
   }
 }
+
+/* Make links in the footer clearly appear as links */
+.footer-text a {
+  text-decoration: underline;
+  color: inherit; /* keep same color as surrounding text unless overridden */
+}
