@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { AbcdeCard } from "../components/educational/AbcdeCard";
 import { ResourceCard } from "../components/educational/ResourceCard";
 import "../components/educational/styles.css"
+
+
+const ExampleImage = ({ src, alt, containerClass = "" }) => {
+  const [isBlurred, setIsBlurred] = useState(true);
+
+  return (
+    <div
+      className={`${containerClass} overflow-hidden cursor-pointer`}
+      onClick={() => setIsBlurred((p) => !p)}
+    >
+      <img
+        src={src}
+        alt={alt}
+        className={`w-full h-full object-cover transition-all duration-300 ${isBlurred ? "blur-md" : "blur-0"}`}
+      />
+    </div>
+  );
+};
 
 export const Educational = () => {
   return (
@@ -174,20 +192,20 @@ export const Educational = () => {
           of these images, try using our scan feature to find further clarity.
         </p>
         <div className="flex justify-center items-center gap-8 py-5 md:py-8">
-          <img
+          <ExampleImage
             src="/educational/skin_lesion.png"
             alt="skin lesion"
-            className="h-[194px] w-[292px] rounded-[4px] border border-[#B59988] hidden lg:inline-block"
+            containerClass="h-[194px] w-[292px] rounded-[4px] border border-[#B59988] hidden lg:inline-block"
           />
-          <img
+          <ExampleImage
             src="/educational/skin_lesion1.png"
             alt="skin lesion"
-            className="h-[120px] md:h-[194px] w-[180px] md:w-[292px] rounded-[4px] border border-[#B59988]"
+            containerClass="h-[120px] md:h-[194px] w-[180px] md:w-[292px] rounded-[4px] border border-[#B59988]"
           />
-          <img
+          <ExampleImage
             src="/educational/skin_lesion2.png"
             alt="skin lesion"
-            className="h-[194px] w-[292px] rounded-[4px] border border-[#B59988] hidden lg:inline-block"
+            containerClass="h-[194px] w-[292px] rounded-[4px] border border-[#B59988] hidden lg:inline-block"
           />
         </div>
         <div className="hidden md:flex items-center justify-center space-x-4">
